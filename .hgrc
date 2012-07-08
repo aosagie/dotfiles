@@ -1,0 +1,11 @@
+[ui]
+username = Anderson Osagie <osagie@gmail.com>
+
+[alias]
+branchdiff = diff -r 'parents(min(branch(.)))'
+forgetadded = forget 'set:added()'
+
+[extensions]
+prompt = ~/.hgd/hg-prompt/prompt.py
+mercurial_keyring =
+fetch =

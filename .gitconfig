@@ -1,0 +1,10 @@
+[user]
+	name = Anderson Osagie
+	email = osagie@gmail.com
+[credential]
+	helper = cache
+[core]
+	autocrlf = input
+	safecrlf = true
+[merge]
+	conflictstyle = diff3
