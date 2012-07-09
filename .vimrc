@@ -205,10 +205,11 @@ let Tlist_GainFocus_On_ToggleOpen = 1
 if has('gui_running')
     set guioptions=er
     if has('win32')
-        set guifont=Consolas:h10
+        set guifont=Consolas:h12
     elseif has('gui_gtk2')
-        "set guifont=Inconsolata-dz\ for\ Powerline\ 11
-        set guifont=Inconsolata\ 11
+        "let g:Powerline_symbols = 'fancy'
+        "set guifont=Inconsolata-dz\ for\ Powerline\ Medium\ 11
+        set guifont=Inconsolata\ 13
     endif
 
     colorscheme vividchalk
