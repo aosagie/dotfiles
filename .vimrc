@@ -211,14 +211,11 @@ if has('gui_running')
         set guifont=Inconsolata\ 11
     endif
 
-    "colorscheme vividchalk
+    colorscheme vividchalk
 else
-    "colorscheme vibrantink
+    colorscheme vibrantink
     highlight PMenu ctermbg=238 gui=bold
 endif
-
-let g:molokai_original = 1
-colorscheme molokai
 
 if has('autocmd')
     " remove any trailing whitespace that is in the file
