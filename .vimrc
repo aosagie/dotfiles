@@ -174,7 +174,7 @@ nnoremap <leader>hb :HgBlame<cr>
 " }}}
 
 " plugin config {{{
-nnoremap <leader>a :Ack! 
+nnoremap <leader>a :Ack! ''<LEFT>
 
 nnoremap <silent> <leader>t :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
