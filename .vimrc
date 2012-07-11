@@ -18,6 +18,8 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'matchit.zip'
 Bundle 'klen/python-mode'
 Bundle 'majutsushi/tagbar'
+Bundle 'groenewege/vim-less'
+Bundle 'skammer/vim-css-color'
 "Begin snipmates and req libraries
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
@@ -53,7 +55,7 @@ set listchars=trail:·,precedes:«,extends:»,eol:↲,tab:▸\
 " set to auto read when a file is changed from the outside
 set autoread
 
-set relativenumber
+set number
 
 set noerrorbells novisualbell
 
@@ -243,11 +245,10 @@ if has('autocmd')
     autocmd InsertLeave * set list hlsearch
     autocmd InsertEnter * set nolist nohlsearch
 
-    " alternate between relative and absolute line numbering
-    autocmd InsertEnter * set number
-    autocmd InsertLeave * set relativenumber
-
     " GUI default turns this on, so turn it back off
     autocmd GUIEnter * set novisualbell
+
+    " compile LESS to CSS on save
+    autocmd BufWritePost,FileWritePost *.less :silent !lessc % %:t:r.css
 endif
 
