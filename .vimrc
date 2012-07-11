@@ -249,6 +249,6 @@ if has('autocmd')
     autocmd GUIEnter * set novisualbell
 
     " compile LESS to CSS on save
-    autocmd BufWritePost,FileWritePost *.less :silent !lessc % %:t:r.css
+    autocmd BufWritePost,FileWritePost *.less :silent !lessc <afile> <afile>:p:r.css
 endif
 
