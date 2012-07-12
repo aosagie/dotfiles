@@ -30,4 +30,3 @@ export NODE_PATH="/usr/local/lib/node_modules/:/usr/local/lib/jsctags/"
 export WORKON_HOME="$HOME/.virtualenvs"
 export PROJECT_HOME="$HOME/workspace"
 export VIRTUALENV_USE_DISTRIBUTE=1
-source /usr/local/bin/virtualenvwrapper.sh

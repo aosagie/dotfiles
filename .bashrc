@@ -111,3 +111,6 @@ fi
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
+
+# virtualenv and virtualenvwrapper configuration
+source /usr/local/bin/virtualenvwrapper.sh
