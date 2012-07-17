@@ -1,4 +1,3 @@
-function cd()
-{
+function cd() {
     builtin cd "$*" && ls
 }

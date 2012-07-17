@@ -82,7 +82,7 @@ set mouse=a
 " enhanced normal mode tab completion
 set wildmenu
 set wildmode=list:longest,full
-set wildignore=.svn,CVS,.git,.hg,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.png,*.xpm,*.gif,*.pyc
+set wildignore=.svn,CVS,.git,.hg,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.png,*.xpm,*.gif,*.pyc,*.jar,*swf
 
 " incremental and highlighted searching
 set incsearch hlsearch
@@ -213,7 +213,7 @@ if has('gui_running')
     elseif has('gui_gtk2')
         "let g:Powerline_symbols = 'fancy'
         "set guifont=Inconsolata-dz\ for\ Powerline\ Medium\ 11
-        set guifont=Inconsolata\ 13
+        set guifont=Inconsolata\ 11
     endif
 
     colorscheme vividchalk
