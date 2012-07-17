@@ -82,7 +82,7 @@ set mouse=a
 " enhanced normal mode tab completion
 set wildmenu
 set wildmode=list:longest,full
-set wildignore=.svn,CVS,.git,.hg,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.png,*.xpm,*.gif,*.pyc,*.jar,*swf
+set wildignore=.svn,CVS,.git,.hg,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.png,*.xpm,*.gif,*.pyc,*.jar,*.swf
 
 " incremental and highlighted searching
 set incsearch hlsearch
@@ -235,7 +235,7 @@ if has('autocmd')
     " auto completion
     autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
     autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS shiftwidth=2 tabstop=2
-    autocmd FileType html setlocal omnifunc=htmlcomplete#CompleteTags
+    autocmd FileType html setlocal omnifunc=htmlcomplete#CompleteTags shiftwidth=2 tabstop=2
     autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
     autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags shiftwidth=2 tabstop=2
     set ofu=syntaxcomplete#Complete
