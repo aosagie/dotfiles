@@ -9,3 +9,4 @@ forgetadded = forget 'set:added()'
 prompt = ~/.hgd/hg-prompt/prompt.py
 mercurial_keyring =
 fetch =
+color =
