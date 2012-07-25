@@ -10,3 +10,10 @@ prompt = ~/.hgd/hg-prompt/prompt.py
 mercurial_keyring =
 fetch =
 color =
+pager =
+
+[pager]
+pager = LESS='FSRX' less
+
+[diff]
+git = true

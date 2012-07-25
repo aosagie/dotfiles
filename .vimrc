@@ -92,7 +92,7 @@ set showmatch
 set matchtime=3
 
 " highlight position
-set cursorline cursorcolumn
+set cursorline cursorcolumn colorcolumn=80
 
 " enhanced status line
 set laststatus=2
