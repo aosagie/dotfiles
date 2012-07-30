@@ -53,6 +53,13 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+# colors
+Color_Off='\[\033[0m\]'
+Black='\[\033[1;90m\]'
+Green='\[\033[01;32m\]'
+Cyan='\[\033[01;34m\]'
+Red='\[\033[0;31m\]'
+
 # mercurial info to display in the prompt
 hg_ps1() {
     hg prompt "[{branch}{status}]" 2> /dev/null
@@ -60,7 +67,11 @@ hg_ps1() {
 
 if [ "$color_prompt" = yes ]; then
     #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[0;31m\]$(hg_ps1)\[\033[00m\]\$ '
+    PS1="${Black}\T${Color_Off} "
+    PS1+='${debian_chroot:+($debian_chroot)}'
+    PS1+="${Green}\u@\h${Color_Off}:${Cyan}\w${Red}"
+    PS1+='$(hg_ps1)'
+    PS1+="${Color_Off}\n\$ "
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
