@@ -206,22 +206,6 @@ let Tlist_Show_One_File = 1
 let Tlist_GainFocus_On_ToggleOpen = 1
 " }}}
 
-if has('gui_running')
-    set guioptions=er
-    if has('win32')
-        set guifont=Consolas:h12
-    elseif has('gui_gtk2')
-        "let g:Powerline_symbols = 'fancy'
-        "set guifont=Inconsolata-dz\ for\ Powerline\ Medium\ 11
-        set guifont=Inconsolata\ 11
-    endif
-
-    colorscheme vividchalk
-else
-    colorscheme vibrantink
-    highlight PMenu ctermbg=238 gui=bold
-endif
-
 if has('autocmd')
     " remove any trailing whitespace that is in the file
     " autocmd BufRead,BufWrite * if ! &bin | call StripTrailingWhite() | endif
@@ -252,3 +236,19 @@ if has('autocmd')
     autocmd BufWritePost,FileWritePost *.less :silent !lessc <afile> <afile>:p:r.css
 endif
 
+set background="dark"
+colorscheme vividchalk
+
+if has('gui_running')
+    set guioptions=er
+    if has('win32')
+        set guifont=Consolas:h12
+    elseif has('gui_gtk2')
+        "let g:Powerline_symbols = 'fancy'
+        "set guifont=Inconsolata-dz\ for\ Powerline\ Medium\ 11
+        set guifont=Inconsolata\ 11
+    endif
+else
+    " don't underline cursorline
+    hi cursorline cterm=none
+endif
