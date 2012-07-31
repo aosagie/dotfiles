@@ -10,3 +10,5 @@
 	conflictstyle = diff3
 [color]
 	ui = auto
+[alias]
+    lg = log --graph --oneline --decorate --abbrev-commit
