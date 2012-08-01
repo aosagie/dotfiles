@@ -62,7 +62,7 @@ Red='\[\033[0;31m\]'
 
 # mercurial prompt info
 hg_ps1() {
-    hg prompt "[{branch}{status}]" 2> /dev/null
+    hg prompt "[{branch}{ @ {bookmark}}{status}]" 2> /dev/null
 }
 
 # git prompt info
