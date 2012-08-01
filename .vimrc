@@ -82,7 +82,6 @@ set mouse=a
 " enhanced normal mode tab completion
 set wildmenu
 set wildmode=list:longest,full
-set wildignore=.svn,CVS,.git,.hg,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.png,*.xpm,*.gif,*.pyc,*.jar,*.swf
 
 " incremental and highlighted searching
 set incsearch hlsearch
@@ -189,7 +188,12 @@ let g:ctrlp_by_filename = 1
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_dotfiles = 0
 let g:ctrlp_max_height = 20
-" wildignore doesn't work when I use the following
+"let g:ctrlp_use_caching = 0
+let g:ctrlp_custom_ignore = {
+    \ 'dir':  '\.git$\|\.hg$\|\.svn$',
+    \ 'file': '\.exe$\|\.so$\|\.dll$\|\.obj$\|\.pyc$\|\.jar$\|\.o$\|\.class$\|\.swf$\|\.png$\|\.gif$'
+    \ }
+" doesn't work with ctrlp_custom_ignore
 "let g:ctrlp_user_command = {
     "\ 'types': {
         "\ 1: ['.hg/', 'hg --cwd %s locate -I .'],
