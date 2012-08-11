@@ -110,7 +110,7 @@ set timeoutlen=500
 " if file's already open in a window or tab use that instead of a buffer
 set switchbuf=useopen,usetab
 
-" backup and Swap directory
+" backup and swap directory
 set backup
 set backupdir=~/.vim/backup
 set directory=~/.vim/tmp/
@@ -118,7 +118,6 @@ set directory=~/.vim/tmp/
 set dictionary=/usr/share/dict/words
 
 " remapping
-
 inoremap jj <ESC>:w<CR>
 nore ; :
 " nore : ;
@@ -126,8 +125,10 @@ nore j gj
 nore k gk
 vnore j gj
 vnore k gk
-
 nnoremap Y y$
+"remap to use very magic (a.k.a. consistent) regex
+nnoremap / /\v
+cnoremap s/ s/\v
 
 " alternate ways to scroll through the popup
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
