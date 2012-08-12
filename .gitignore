@@ -1,6 +1,5 @@
-.vim/tmp
-.vim/backup/
-.vim/.VimballRecord
-.vim/.netrwhist
-.vim/bundle
-.hgd/*/.hg/
+vim/tmp
+vim/backup/
+vim/.VimballRecord
+vim/.netrwhist
+vim/bundle
