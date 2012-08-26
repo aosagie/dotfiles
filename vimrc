@@ -251,7 +251,11 @@ if has('gui_running')
     elseif has('gui_gtk2')
         "let g:Powerline_symbols = 'fancy'
         "set guifont=Inconsolata-dz\ for\ Powerline\ Medium\ 11
-        set guifont=Inconsolata\ 11
+        if hostname() == 'multivac'
+            set guifont=Inconsolata\ 11
+        else
+            set guifont=Inconsolata\ 13
+        endif
     endif
 else
     " don't underline cursorline
