@@ -3,7 +3,7 @@ export TERM="xterm-256color"
 export MAVEN_HOME="/opt/apache-maven/bin"
 export NODE_PATH="/usr/local/lib/node_modules/:/usr/local/lib/node/"
 
-typeset -U path
+typeset -U path # ensure unique paths
 path=($MAVEN_HOME $path)
 
 # virtualenv and virtualenvwrapper configuration
