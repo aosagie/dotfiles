@@ -32,22 +32,26 @@ autoload -U colors && colors
 
 # Set up the prompt
 autoload -Uz promptinit && promptinit
-prompt adam1
+prompt adam2
 
 # Launch file types with their associated handlers
-autoload -U zsh-mime-setup && zsh-mime-setup
-zstyle ':mime:.txt:' handler 'gvim %s'
-zstyle ':mime:.pdf:' handler 'evince %s'
+autoload -U zsh-mime-setup
+zstyle ':mime:.txt:' handler $EDITOR %s
+zstyle ':mime:.pdf:' handler evince %s
+zsh-mime-setup
+
+# pasting with tabs doesn't perform completion
+zstyle ':completion:*' insert-tab pending
 
 # Multi-terminal history
 setopt histignorealldups sharehistory
 
 # Aliases
 alias ls='ls -F --color=auto'
-alias l='ls -la'
+alias l='ls'
+alias ll='ls -la'
 alias rm='rm -i'
 alias grep='grep --color=auto'
-#alias todo='vim ~/Desktop/todo'
 
 # Automatically run 'ls' upon entering a new directory
 function chpwd() {
@@ -61,11 +65,16 @@ setopt AUTO_LIST
 # In conjunction with AUTO_LIST, only lists when completion is ambiguous
 setopt LIST_AMBIGUOUS
 
+# Make completion list smaller
+setopt LIST_PACKED
+
 # Allow moving through directories just by entering their names
 setopt AUTO_CD
 
 # Keep stack-based history of traversed directories that can be accessed w/ 'popd'
 setopt AUTO_PUSHD
+
+setopt PUSHD_IGNORE_DUPS
 
 # Report status of background jobs immediately, not on next prompt
 setopt NOTIFY
