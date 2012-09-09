@@ -126,7 +126,7 @@ nore k gk
 vnore j gj
 vnore k gk
 nnoremap Y y$
-"remap to use very magic (a.k.a. consistent) regex
+" remap to use very magic (a.k.a. consistent) regex
 nnoremap / /\v
 cnoremap s/ s/\v
 
@@ -138,6 +138,9 @@ cmap w!! w !sudo tee % >/dev/null
 
 " use space bar to insert blank lines without leaving normal mode
 noremap <silent> <space> :put =''<CR>
+
+" clear search highlighting
+map // :nohlsearch<CR>; echo 'Search highlight cleared'<CR>
 
 " omnicomplete progressive completion
 set completeopt=longest,menuone ",preview
@@ -228,6 +231,9 @@ if has('autocmd')
     autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
     autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags shiftwidth=2 tabstop=2
     set ofu=syntaxcomplete#Complete
+
+    " spell checking on text files
+    autocmd BufEnter,BufNew *.txt set spell spelllang=en_gb
 
     " show special characters when not in insert mode
     autocmd VimEnter * set list

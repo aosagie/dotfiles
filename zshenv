@@ -8,5 +8,5 @@ path=($MAVEN_HOME $path)
 
 # virtualenv and virtualenvwrapper configuration
 export WORKON_HOME="$HOME/.virtualenvs"
-export PROJECT_HOME="$HOME/workspace"
+export PROJECT_HOME="$HOME/Code"
 export VIRTUALENV_USE_DISTRIBUTE=1

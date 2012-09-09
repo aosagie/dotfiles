@@ -1,3 +1,11 @@
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt appendhistory autocd notify
+unsetopt beep
+bindkey -v
+# End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 
 zstyle ':completion:*' auto-description 'specify: %d'
@@ -18,21 +26,13 @@ zstyle :compinstall filename '/home/aosagie/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
-# Lines configured by zsh-newuser-install
-HISTFILE=~/.zsh_history
-HISTSIZE=10000
-SAVEHIST=10000
-setopt appendhistory autocd notify
-unsetopt beep
-bindkey -v
-# End of lines configured by zsh-newuser-install
 
 # Allow access to named colors
 autoload -U colors && colors
 
 # Set up the prompt
 autoload -Uz promptinit && promptinit
-prompt adam2
+prompt adam1
 
 # Launch file types with their associated handlers
 autoload -U zsh-mime-setup
@@ -48,8 +48,10 @@ setopt histignorealldups sharehistory
 
 # Aliases
 alias ls='ls -F --color=auto'
+alias tree='tree -C'
 alias l='ls'
 alias ll='ls -la'
+alias lll='tree -d'
 alias rm='rm -i'
 alias grep='grep --color=auto'
 
@@ -82,10 +84,16 @@ setopt NOTIFY
 # Inform of running jobs when trying to exit
 setopt CHECK_JOBS
 
+# Self explanatory
+setopt HIST_REDUCE_BLANKS
+
 # make backspace work normally in vi mode
 zle -A .backward-delete-char vi-backward-delete-char
 
-bindkey -M viins 'jj' vi-cmd-mode #'jj' enters command mode
+bindkey -M viins 'jj' vi-cmd-mode #enter cmd mode w/ 'jj' instead of just 'ESC'
+bindkey -M vicmd 'u' undo
+bindkey -M vicmd 'q' push-line #store current line then restore it after you enter new command
+bindkey -M viins ' ' magic-space #history expansion works w/ space instead of just tab
 bindkey "\e[Z" reverse-menu-complete #shift+tab
 bindkey "^[[A" history-beginning-search-backward #up
 bindkey "^[[B" history-beginning-search-forward #down
