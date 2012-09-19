@@ -233,7 +233,7 @@ if has('autocmd')
     set ofu=syntaxcomplete#Complete
 
     " spell checking on text files
-    autocmd BufEnter,BufNew *.txt set spell spelllang=en_gb
+    "autocmd BufEnter,BufNew *.txt set spell spelllang=en_gb
 
     " show special characters when not in insert mode
     autocmd VimEnter * set list
