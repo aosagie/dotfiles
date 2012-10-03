@@ -1,0 +1,3 @@
+noremap ; :
+noremap j 2j
+noremap k 2k

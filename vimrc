@@ -248,9 +248,10 @@ if has('autocmd')
 endif
 
 set background="dark"
-colorscheme vividchalk
 
 if has('gui_running')
+    colorscheme molokai
+
     set guioptions=er
     if has('win32')
         set guifont=Consolas:h12
@@ -264,6 +265,8 @@ if has('gui_running')
         endif
     endif
 else
+    colorscheme vividchalk
+
     " don't underline cursorline
     hi cursorline cterm=none
 endif
