@@ -194,7 +194,7 @@ let g:ctrlp_dotfiles = 0
 let g:ctrlp_max_height = 20
 "let g:ctrlp_use_caching = 0
 let g:ctrlp_custom_ignore = {
-    \ 'dir':  '\.git$\|\.hg$\|node_modules$\|\.svn$',
+    \ 'dir':  '\.git$\|\.hg$\|target$\|node_modules$\|\.svn$',
     \ 'file': '\.exe$\|\.so$\|\.dll$\|\.obj$\|\.pyc$\|\.jar$\|\.o$\|\.class$\|\.swf$\|\.png$\|\.gif$'
     \ }
 " doesn't work with ctrlp_custom_ignore
