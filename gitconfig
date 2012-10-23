@@ -2,7 +2,7 @@
 	name = Anderson Osagie
 	email = osagie@gmail.com
 [credential]
-	helper = cache
+	helper = cache --timeout=3600
 [core]
 	autocrlf = input
 	safecrlf = true
