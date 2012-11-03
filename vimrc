@@ -207,6 +207,9 @@ let g:ctrlp_custom_ignore = {
     "\ }
 
 let g:syntastic_enable_signs = 1
+let g:syntastic_mode_map = { 'mode': 'active',
+            \ 'active_filetypes': [],
+            \ 'passive_filetypes': ['java'] }
 
 nmap <leader>g :TlistToggle<CR>:setlocal nocursorcolumn nolist<CR>
 let Tlist_Exit_OnlyWindow = 1
