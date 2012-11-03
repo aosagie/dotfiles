@@ -27,6 +27,9 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+# Better kill command completion
+zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,cmd'
+
 # Allow access to named colors
 autoload -U colors && colors
 
