@@ -1,0 +1,5 @@
+--type-set=conf=.conf
+--type-set=log=.log
+--type-set=csv=.csv
+--type=text
+--ignore-dir=target
