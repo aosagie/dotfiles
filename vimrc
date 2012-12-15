@@ -248,6 +248,9 @@ if has('autocmd')
 
     " compile LESS to CSS on save
     autocmd BufWritePost,FileWritePost *.less :silent !lessc <afile> <afile>:p:r.css
+
+    " pig filetype detection
+    autocmd BufNewFile,BufRead *.pig set filetype=pig syntax=pig
 endif
 
 set background="dark"

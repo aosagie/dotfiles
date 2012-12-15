@@ -53,7 +53,7 @@ setopt histignorealldups sharehistory
 alias ls='ls -F --color=auto'
 alias tree='tree -C'
 alias l='ls'
-alias ll='ls -la'
+alias ll='ls -lah'
 alias lll='tree -d'
 alias rm='rm -i'
 alias grep='grep --color=auto'
