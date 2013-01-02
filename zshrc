@@ -50,7 +50,7 @@ zstyle ':completion:*' insert-tab pending
 setopt histignorealldups sharehistory
 
 # Aliases
-alias ls='ls -F --color=auto'
+alias ls='ls -F --color=auto --group-directories-first'
 alias tree='tree -C'
 alias l='ls'
 alias ll='ls -lah'
