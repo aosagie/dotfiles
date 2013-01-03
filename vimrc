@@ -153,31 +153,6 @@ function! StripTrailingWhite()
 endfunction
 command! StripTrailingWhite call StripTrailingWhite()
 
-" utility functions {{{
-function! s:HgBlame()
-    let fn = expand('%:p')
-
-    wincmd v
-    wincmd h
-    edit __hgblame__
-    vertical resize 28
-
-    setlocal scrollbind winfixwidth nolist nowrap nonumber nocursorline nocursorcolumn buftype=nofile ft=none
-
-    normal ggdG
-    execute 'silent r!hg blame -undq ' . fn
-    normal ggdd
-    execute ':%s/\v:.*$//'
-    " setlocal nomodifiable
-
-    wincmd l
-    setlocal scrollbind
-    syncbind
-endf
-command! -nargs=0 HgBlame call s:HgBlame()
-nnoremap <leader>hb :HgBlame<cr>
-" }}}
-
 " plugin config {{{
 nnoremap <leader>a :Ack! ''<LEFT>
 
