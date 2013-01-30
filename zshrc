@@ -58,6 +58,7 @@ alias lll='tree -d'
 alias rm='rm -i'
 alias grep='grep --color=auto'
 alias pjson='python -mjson.tool | pygmentize -l javascript'
+alias vi='vim'
 
 # Automatically run 'ls' upon entering a new directory
 function chpwd() {
