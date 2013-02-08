@@ -118,7 +118,8 @@ set directory=~/.vim/tmp/
 set dictionary=/usr/share/dict/words
 
 " remapping
-inoremap jj <ESC>:w<CR>
+"inoremap jj <ESC>:w<CR>
+inoremap jj <ESC>
 nore ; :
 " nore : ;
 nore j gj
