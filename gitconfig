@@ -13,4 +13,3 @@
 [alias]
 	lg = log --graph --oneline --decorate --abbrev-commit
 	serve = daemon --reuseaddr --verbose --base-path=.git --export-all
-	grep-history = !sh -c 'git grep $1 $(git rev-list --all)' -
