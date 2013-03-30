@@ -13,3 +13,5 @@
 [alias]
 	lg = log --graph --oneline --decorate --abbrev-commit
 	serve = daemon --reuseaddr --verbose --base-path=.git --export-all
+[push]
+	default = simple
