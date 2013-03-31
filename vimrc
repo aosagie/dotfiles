@@ -19,7 +19,7 @@ Bundle 'matchit.zip'
 Bundle 'klen/python-mode'
 Bundle 'majutsushi/tagbar'
 Bundle 'groenewege/vim-less'
-Bundle 'skammer/vim-css-color'
+Bundle 'ap/vim-css-color'
 "Begin snipmates and req libraries
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
