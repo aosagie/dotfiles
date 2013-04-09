@@ -3,3 +3,8 @@ vim/backup/
 vim/.VimballRecord
 vim/.netrwhist
 vim/bundle
+
+sbt/.lib
+sbt/boot
+target/
+project/
