@@ -108,6 +108,9 @@ bindkey "^[[B" down-line-or-search #down
 # virtualenv and virtualenvwrapper configuration
 source /usr/local/bin/virtualenvwrapper.sh
 
+# fixes inability to ctrl-s horizontal splits in terminal vim's CtrlP
+stty -ixon -ixoff
+
 # git and svn info in the command line
 autoload -Uz vcs_info
 
