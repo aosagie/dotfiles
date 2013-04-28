@@ -122,7 +122,6 @@ set directory=~/.vim/tmp/swap//
 set dictionary=/usr/share/dict/words
 
 " remapping
-"inoremap jj <ESC>:w<CR>
 inoremap jj <ESC>
 nore ; :
 " nore : ;
@@ -134,6 +133,7 @@ nnoremap Y y$
 " remap to use very magic (a.k.a. consistent) regex
 nnoremap / /\v
 cnoremap s/ s/\v
+map <tab> %
 
 " alternate ways to scroll through the popup
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
