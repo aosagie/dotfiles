@@ -115,8 +115,9 @@ set switchbuf=useopen,usetab
 
 " backup and swap directory
 set backup
-set backupdir=~/.vim/backup
-set directory=~/.vim/tmp/
+set undodir=~/.vim/tmp/undo//
+set backupdir=~/.vim/tmp/backup//
+set directory=~/.vim/tmp/swap//
 
 set dictionary=/usr/share/dict/words
 
