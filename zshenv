@@ -6,6 +6,7 @@ export TMUX_BIN="/opt/tmux/bin"
 
 typeset -U path # ensure unique paths
 path=($TMUX_BIN $MAVEN_HOME $path)
+fpath=(/usr/local/src/zsh-completions/src/ $fpath)
 
 # virtualenv and virtualenvwrapper configuration
 export WORKON_HOME="$HOME/.virtualenvs"
