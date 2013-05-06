@@ -21,12 +21,8 @@ Bundle 'klen/python-mode'
 Bundle 'majutsushi/tagbar'
 Bundle 'groenewege/vim-less'
 Bundle 'ap/vim-css-color'
-"Begin snipmates and req libraries
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
-Bundle "snipmate-snippets"
-Bundle "garbas/vim-snipmate"
-"End snipmates and req libraries
+Bundle 'MarcWeber/ultisnips'
+Bundle 'honza/vim-snippets'
 
 filetype plugin indent on
 
