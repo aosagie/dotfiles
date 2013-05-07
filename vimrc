@@ -1,13 +1,16 @@
 set nocompatible
+set t_Co=256
 
 filetype off
 
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
-
 Bundle 'gmarik/vundle'
+
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+Bundle 'Lokaltog/powerline'
+
 Bundle 'Lokaltog/vim-easymotion'
-Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-markdown'
@@ -129,10 +132,11 @@ nnoremap Y y$
 " remap to use very magic (a.k.a. consistent) regex
 nnoremap / /\v
 cnoremap s/ s/\v
-map <tab> %
+map <TAB> %
 
 " alternate ways to scroll through the popup
-inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "<TAB>"
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "<TAB>"
 
 " sudo to write
 cmap w!! w !sudo tee % >/dev/null
@@ -239,11 +243,12 @@ if has('gui_running')
         set guifont=Consolas:h12
     elseif has('gui_gtk2')
         "let g:Powerline_symbols = 'fancy'
-        "set guifont=Inconsolata-dz\ for\ Powerline\ Medium\ 11
+        "set guifont=Inconsolata\ for\ Powerline\ 13
+        set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 11
         if hostname() == 'multivac'
-            set guifont=Inconsolata\ 11
+            "set guifont=Inconsolata\ 11
         else
-            set guifont=Inconsolata\ 13
+            "set guifont=Inconsolata\ 13
         endif
     endif
 else
