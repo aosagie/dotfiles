@@ -7,9 +7,7 @@ set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 Bundle 'gmarik/vundle'
 
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
-Bundle 'Lokaltog/powerline'
-
+Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
