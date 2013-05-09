@@ -22,8 +22,8 @@ Bundle 'klen/python-mode'
 Bundle 'majutsushi/tagbar'
 Bundle 'groenewege/vim-less'
 Bundle 'ap/vim-css-color'
-Bundle 'MarcWeber/ultisnips'
-Bundle 'honza/vim-snippets'
+"Bundle 'MarcWeber/ultisnips'
+"Bundle 'honza/vim-snippets'
 
 filetype plugin indent on
 
