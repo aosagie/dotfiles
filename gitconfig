@@ -15,7 +15,7 @@
 [color]
 	ui = auto
 [alias]
-	lg = log --graph --oneline --decorate --abbrev-commit
+	lg = log --graph --oneline --decorate --abbrev-commit --all
 	serve = daemon --reuseaddr --verbose --base-path=.git --export-all
 [push]
 	default = simple
