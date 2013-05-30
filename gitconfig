@@ -16,7 +16,7 @@
 	ui = auto
 [alias]
 	;lg = log --graph --oneline --decorate --abbrev-commit --all
-	lg = log --graph --pretty=format:'%Cred%h%Creset %C(auto)%d%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset' --abbrev-commit --date=relative --all
+	lg = log --graph --pretty=format:'%Cred%h%Creset%C(auto)%d%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset' --abbrev-commit --date=relative --all
 	serve = daemon --reuseaddr --verbose --base-path=.git --export-all
 [push]
 	default = simple
