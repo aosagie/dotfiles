@@ -60,6 +60,7 @@ alias grep='grep --color=auto'
 alias pjson='python -mjson.tool | pygmentize -l javascript'
 alias vi='vim'
 alias jps='jps -l'
+alias sbt-debug='SBT_OPTS="-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5004" sbt'
 
 # Automatically run 'ls' upon entering a new directory
 function chpwd() {
