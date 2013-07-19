@@ -3,7 +3,8 @@ vim/.VimballRecord
 vim/.netrwhist
 vim/bundle
 
-sbt/.lib
-sbt/boot
+sbt/launchers
+sbt/*/boot
+sbt/*/staging
 target/
 project/

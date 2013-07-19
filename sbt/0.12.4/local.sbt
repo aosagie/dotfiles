@@ -2,6 +2,6 @@
 
 //assemblySettings
 
-seq(Revolver.settings: _*)
+//seq(Revolver.settings: _*)
 
 net.virtualvoid.sbt.graph.Plugin.graphSettings
