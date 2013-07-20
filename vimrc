@@ -22,6 +22,7 @@ Bundle 'klen/python-mode'
 Bundle 'majutsushi/tagbar'
 Bundle 'groenewege/vim-less'
 Bundle 'ap/vim-css-color'
+"Bundle 'Valloric/YouCompleteMe'
 "Bundle 'MarcWeber/ultisnips'
 "Bundle 'honza/vim-snippets'
 
@@ -133,8 +134,8 @@ cnoremap s/ s/\v
 map <TAB> %
 
 " alternate ways to scroll through the popup
-inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<TAB>"
+"inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+"inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<TAB>"
 
 " sudo to write
 cmap w!! w !sudo tee % >/dev/null
