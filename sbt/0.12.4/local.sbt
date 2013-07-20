@@ -1,6 +1,6 @@
-//import AssemblyKeys._
+import AssemblyKeys._
 
-//assemblySettings
+assemblySettings
 
 //seq(Revolver.settings: _*)
 
