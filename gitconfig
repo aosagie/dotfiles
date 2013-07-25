@@ -21,4 +21,5 @@
 [push]
 	default = simple
 [diff]
-	algorithm = histogram
+	;algorithm = histogram
+	algorithm = patience
