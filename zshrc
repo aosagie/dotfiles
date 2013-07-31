@@ -60,7 +60,8 @@ alias grep='grep --color=auto'
 alias pjson='python -mjson.tool | pygmentize -l javascript'
 alias vi='vim'
 alias jps='jps -l'
-alias sbt-debug='sbt -jvm-debug 5005'
+alias sbtdebug='sbt -jvm-debug 5005'
+alias mkscalaproject='mkdir -p src/{main,test}/{scala,java,resources}'
 
 # Automatically run 'ls' upon entering a new directory
 function chpwd() {
