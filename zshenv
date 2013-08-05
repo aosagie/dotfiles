@@ -13,3 +13,5 @@ fpath=(/usr/local/src/zsh-completions/src/ $fpath)
 export WORKON_HOME="$HOME/.virtualenvs"
 export PROJECT_HOME="$HOME/Code"
 export VIRTUALENV_USE_DISTRIBUTE=1
+
+[ -f ~/.zshenv.local ] && source ~/.zshenv.local
