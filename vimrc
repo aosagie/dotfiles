@@ -128,10 +128,10 @@ nore k gk
 vnore j gj
 vnore k gk
 nnoremap Y y$
-" remap to use very magic (a.k.a. consistent) regex
-nnoremap / /\v
-cnoremap s/ s/\v
 map <TAB> %
+" remap to use very magic (a.k.a. consistent) regex
+"nnoremap / /\v
+"cnoremap s/ s/\v
 
 " alternate ways to scroll through the popup
 "inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
