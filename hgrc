@@ -7,8 +7,8 @@ forgetadded = forget 'set:added()'
 lg = log -G --style 'compact'
 
 [extensions]
-prompt = ~/.hgd/hg-prompt/prompt.py
-mercurial_keyring =
+#prompt = ~/.hgd/hg-prompt/prompt.py
+#mercurial_keyring =
 fetch =
 color =
 pager =
