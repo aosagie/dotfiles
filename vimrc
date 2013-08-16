@@ -147,6 +147,11 @@ noremap <silent> <space> :put =''<CR>
 " clear search highlighting
 map // :nohlsearch<CR>; echo 'Search highlight cleared'<CR>
 
+" folding settings
+set foldmethod=indent
+set foldnestmax=10
+set nofoldenable
+
 " omnicomplete progressive completion
 set completeopt=longest,menuone ",preview
 
