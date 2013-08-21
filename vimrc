@@ -50,7 +50,7 @@ set autoindent smartindent
 set history=100
 set undolevels=100
 
-set listchars=trail:·,precedes:«,extends:»,eol:↲,tab:▸\ 
+set listchars=eol:↲,trail:·,tab:▸\ ,precedes:«,extends:»
 
 set showbreak=↪
 
@@ -139,7 +139,7 @@ map <TAB> %
 "inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<TAB>"
 
 " sudo to write
-cmap w!! w !sudo tee % >/dev/null
+cmap w!! w !sudo tee % >/dev/null<CR>:e!<CR><CR>
 
 " use space bar to insert blank lines without leaving normal mode
 noremap <silent> <space> :put =''<CR>
