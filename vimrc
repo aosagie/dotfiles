@@ -124,7 +124,7 @@ set dictionary=/usr/share/dict/words
 " remapping
 inoremap jj <ESC>
 nore ; :
-" nore : ;
+nore : ;
 nore j gj
 nore k gk
 vnore j gj
