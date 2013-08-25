@@ -3,9 +3,6 @@
 	email = osagie@gmail.com
 [credential]
 	helper = cache --timeout=3600
-[core]
-	autocrlf = input
-	safecrlf = true
 [merge]
 	conflictstyle = diff3
 	tool = kdiff3
