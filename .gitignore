@@ -4,7 +4,7 @@ vim/.netrwhist
 vim/bundle
 
 sbt/launchers
-sbt/*/boot
+sbt/**/boot
 sbt/*/staging
 target/
 project/
