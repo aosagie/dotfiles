@@ -143,7 +143,7 @@ map <TAB> %
 cmap w!! w !sudo tee % >/dev/null<CR>:e!<CR><CR>
 
 " use space bar to insert blank lines without leaving normal mode
-noremap <silent> <space> :put =''<CR>
+"noremap <silent> <space> :put =''<CR>
 
 " clear search highlighting
 map // :nohlsearch<CR>; echo 'Search highlight cleared'<CR>
