@@ -95,6 +95,8 @@ setopt CHECK_JOBS
 # Self explanatory
 setopt HIST_REDUCE_BLANKS
 
+setopt HIST_IGNORE_SPACE
+
 # make backspace work normally in vi mode
 zle -A .backward-delete-char vi-backward-delete-char
 
