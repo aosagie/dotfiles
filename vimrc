@@ -58,7 +58,7 @@ set showbreak=↪
 " set to auto read when a file is changed from the outside
 set autoread
 
-set number
+set number relativenumber
 
 set noerrorbells novisualbell
 
