@@ -43,7 +43,7 @@ zstyle ':mime:.txt:' handler $EDITOR %s
 zstyle ':mime:.pdf:' handler evince %s
 zsh-mime-setup
 
-# pasting with tabs doesn't perform completion
+# Pasting with tabs doesn't perform completion
 zstyle ':completion:*' insert-tab pending
 
 # Multi-terminal history
@@ -55,7 +55,7 @@ alias tree='tree -C'
 alias l='ls'
 alias ll='ls -lah'
 alias lll='tree -d'
-alias rm='rm -i'
+alias rm='rm -I'
 alias grep='grep --color=auto'
 alias pjson='python -mjson.tool | pygmentize -l javascript'
 alias jps='jps -l'
