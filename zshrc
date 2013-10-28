@@ -59,7 +59,6 @@ alias rm='rm -I'
 alias grep='grep --color=auto'
 alias pjson='python -mjson.tool | pygmentize -l javascript'
 alias jps='jps -l'
-alias mkscalaproject='mkdir -p src/{main,test}/{scala,java,resources}'
 
 # Automatically run 'ls' upon entering a new directory
 function chpwd() {
