@@ -13,7 +13,7 @@
 	ui = auto
 [alias]
 	lg = log --graph --pretty=format:'%C(auto)%h%d%Creset %s %C(cyan)(%cr) %C(blue)<%an>%Creset' --abbrev-commit --date=relative
-	serve = daemon --reuseaddr --verbose --base-path=.git --export-all
+	serve = !git daemon --base-path=. --export-all --reuseaddr --informative-errors --verbose
 [push]
 	default = simple
 [diff]
