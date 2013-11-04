@@ -13,10 +13,10 @@ shellPrompt := { state =>
 lazy val mkdirs = taskKey[Unit]("Creates project directory structure")
 
 mkdirs := {
-    val directories = for {
-      dir1 <- Seq("main", "test")
-      dir2 <- Seq("scala", "java", "resources")
-    } yield baseDirectory.value / "src" / dir1 / dir2
-    IO.createDirectories(directories)
-    println("Project directory structure created")
+  val directories = for {
+    dir1 <- Seq("main", "test")
+    dir2 <- Seq("scala", "java", "resources")
+  } yield baseDirectory.value / "src" / dir1 / dir2
+  IO.createDirectories(directories)
+  println("Project directory structure created")
 }
