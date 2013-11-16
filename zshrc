@@ -60,6 +60,7 @@ alias mv='mv -i'
 alias grep='grep --color=auto'
 alias pjson='python -mjson.tool | pygmentize -l javascript'
 alias jps='jps -l'
+alias vim='gvim -v'
 
 # Automatically run 'ls' upon entering a new directory
 function chpwd() {
