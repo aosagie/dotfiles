@@ -18,16 +18,13 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'kien/ctrlp.vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'matchit.zip'
-Bundle 'klen/python-mode'
+Bundle 'davidhalter/jedi-vim'
 Bundle 'majutsushi/tagbar'
 Bundle 'groenewege/vim-less'
 Bundle 'ap/vim-css-color'
 Bundle 'thinca/vim-fontzoom'
 Bundle 'mhinz/vim-tmuxify'
-"Bundle 'kana/vim-smartinput'
-"Bundle 'Valloric/YouCompleteMe'
-"Bundle 'MarcWeber/ultisnips'
-"Bundle 'honza/vim-snippets'
+Bundle 'ervandew/supertab'
 
 filetype plugin indent on
 
@@ -202,6 +199,8 @@ nmap <leader>g :TlistToggle<CR>:setlocal nocursorcolumn nolist<CR>
 let Tlist_Exit_OnlyWindow = 1
 let Tlist_Show_One_File = 1
 let Tlist_GainFocus_On_ToggleOpen = 1
+
+let g:SuperTabDefaultCompletionType = "context"
 " }}}
 
 if has('autocmd')
@@ -249,14 +248,7 @@ if has('gui_running')
     if has('win32')
         set guifont=Consolas:h12
     elseif has('gui_gtk2')
-        "let g:Powerline_symbols = 'fancy'
-        "set guifont=Inconsolata\ for\ Powerline\ 13
         set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 11
-        if hostname() == 'multivac'
-            "set guifont=Inconsolata\ 11
-        else
-            "set guifont=Inconsolata\ 13
-        endif
     endif
 else
     colorscheme vividchalk
