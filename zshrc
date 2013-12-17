@@ -61,6 +61,8 @@ alias grep='grep --color=auto'
 alias pjson='python -mjson.tool | pygmentize -l javascript'
 alias jps='jps -l'
 alias vim='gvim -v'
+alias mvnDebug='mvn -Dmaven.surefire.debug'
+alias note=" note"
 
 # Automatically run 'ls' upon entering a new directory
 function chpwd() {
@@ -109,7 +111,7 @@ bindkey "^[[A" up-line-or-search #up
 bindkey "^[[B" down-line-or-search #down
 
 # virtualenv and virtualenvwrapper configuration
-source /usr/local/bin/virtualenvwrapper.sh
+#source /usr/bin/virtualenvwrapper.sh
 
 # fixes inability to ctrl-s horizontal splits in terminal vim's CtrlP
 stty -ixon -ixoff

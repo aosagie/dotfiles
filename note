@@ -1,0 +1,26 @@
+#!/usr/bin/env python
+
+import os
+import re
+import sys
+from datetime import datetime
+from subprocess import Popen, PIPE
+
+note_path = os.path.expanduser("~") + "/notes.txt"
+
+# Get date of last line in notes
+last_line = Popen(["tail", "-1", note_path], stdout=PIPE, stderr=PIPE).stdout.readline()
+date_match = re.match('\d{4}-\d\d-\d\d', last_line)
+last_date = date_match.group() if date_match is not None else None
+
+now = datetime.now()
+
+# Append a new note
+with open(note_path, "a") as note_file:
+    # Insert divider if current date is different than last note's date
+    if last_date != now.strftime("%Y-%m-%d") and last_date is not None:
+        note_file.write("-" * 30 + "\n")
+
+    note_file.write(now.strftime("%Y-%m-%d %H:%M:%S") + " " + " ".join(sys.argv[1:]) + "\n")
+
+print("Noted!")
