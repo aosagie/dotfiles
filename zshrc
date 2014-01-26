@@ -62,6 +62,7 @@ alias pjson='python -mjson.tool | pygmentize -l javascript'
 alias jps='jps -l'
 alias vim='gvim -v'
 alias mvnDebug='mvn -Dmaven.surefire.debug'
+alias sbtDebug='sbt -jvm-debug 5005'
 alias note=" note"
 
 # Automatically run 'ls' upon entering a new directory
