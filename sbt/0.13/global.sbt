@@ -10,7 +10,7 @@ shellPrompt := { state =>
   "sbt (%s)> ".format(Project.extract(state).currentProject.id)
 }
 
-lazy val mkdirs = taskKey[Unit]("Creates project directory structure")
+lazy val mkdirs = taskKey[Unit]("Creates maven-style project directory structure")
 
 mkdirs := {
   val directories = for {
