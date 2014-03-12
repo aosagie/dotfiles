@@ -25,6 +25,7 @@ Bundle 'ap/vim-css-color'
 Bundle 'thinca/vim-fontzoom'
 Bundle 'mhinz/vim-tmuxify'
 Bundle 'ervandew/supertab'
+Bundle 'saltstack/salt-vim'
 
 filetype plugin indent on
 
