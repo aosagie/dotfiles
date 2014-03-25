@@ -7,7 +7,9 @@ seq(Revolver.settings: _*)
 net.virtualvoid.sbt.graph.Plugin.graphSettings
 
 shellPrompt := { state =>
-  "sbt (%s)> ".format(Project.extract(state).currentProject.id)
+  import scala.Console.{CYAN, RESET}
+  val projectId = Project.extract(state).currentProject.id
+  s"sbt ($CYAN$projectId$RESET)> "
 }
 
 lazy val mkdirs = taskKey[Unit]("Creates maven-style project directory structure")
