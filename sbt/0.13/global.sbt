@@ -2,7 +2,7 @@ import AssemblyKeys._
 
 assemblySettings
 
-seq(Revolver.settings: _*)
+Revolver.settings
 
 net.virtualvoid.sbt.graph.Plugin.graphSettings
 
