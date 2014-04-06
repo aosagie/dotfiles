@@ -1,10 +1,8 @@
-import AssemblyKeys._
-
-assemblySettings
-
-Revolver.settings
+sbtassembly.Plugin.assemblySettings
 
 net.virtualvoid.sbt.graph.Plugin.graphSettings
+
+Revolver.settings
 
 shellPrompt := { state =>
   import scala.Console.{CYAN, RESET}
