@@ -61,8 +61,8 @@ alias grep='grep --color=auto'
 alias pjson='python -mjson.tool | pygmentize -l javascript'
 alias jps='jps -l'
 alias vim='gvim -v'
-alias mvnDebug='mvn -Dmaven.surefire.debug'
-alias sbtDebug='sbt -jvm-debug 5005'
+alias mvndebug='mvn -Dmaven.surefire.debug'
+alias sbtdebug='sbt -jvm-debug 5005'
 alias note=" note"
 
 # Automatically run 'ls' upon entering a new directory
