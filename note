@@ -6,14 +6,13 @@ import sys
 from datetime import datetime
 from subprocess import Popen, PIPE
 
-note_path = os.path.expanduser("~") + "/notes.txt"
+note_path   = os.path.expanduser("~") + "/notes.txt"
+now         = datetime.now()
 
 # Get date of last line in notes
-last_line = Popen(["tail", "-1", note_path], stdout=PIPE, stderr=PIPE).stdout.readline()
-date_match = re.match('\d{4}-\d\d-\d\d', last_line)
-last_date = date_match.group() if date_match is not None else None
-
-now = datetime.now()
+last_line   = Popen(["tail", "-1", note_path], stdout=PIPE, stderr=PIPE).stdout.readline()
+date_match  = re.match('\d{4}-\d\d-\d\d', last_line)
+last_date   = date_match.group() if date_match is not None else None
 
 # Append a new note
 with open(note_path, "a") as note_file:
