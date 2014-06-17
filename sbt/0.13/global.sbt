@@ -6,8 +6,7 @@ Revolver.settings
 
 shellPrompt := { state =>
   import scala.Console.{CYAN, RESET}
-  val projectId = Project.extract(state).currentProject.id
-  s"sbt ($CYAN$projectId$RESET)> "
+  s"sbt ($CYAN${name.value}$RESET)> "
 }
 
 lazy val mkdirs = taskKey[Unit]("Creates maven-style project directory structure")
