@@ -1,8 +1,9 @@
 export EDITOR="vim"
 export TERM="xterm-256color"
-export NODE_PATH="/usr/local/lib/node_modules/:/usr/local/lib/node/"
 export HOME_BIN="$HOME/bin"
-export JAVA_HOME="/usr/java/latest/"
+export JAVA_HOME="/usr/java/default/"
+export NODE_PATH="/usr/local/lib/node_modules/:/usr/local/lib/node/"
+export SPARK_HOME="/opt/spark/"
 
 typeset -U path # ensure unique paths
 path=($HOME_BIN $path)
