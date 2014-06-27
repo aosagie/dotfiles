@@ -5,27 +5,27 @@ filetype off
 
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
-Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-markdown'
-Bundle 'tpope/vim-fugitive'
-Bundle 'scrooloose/syntastic'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'kien/ctrlp.vim'
-Bundle 'mileszs/ack.vim'
-Bundle 'matchit.zip'
-Bundle 'davidhalter/jedi-vim'
-Bundle 'majutsushi/tagbar'
-Bundle 'groenewege/vim-less'
-Bundle 'ap/vim-css-color'
-Bundle 'thinca/vim-fontzoom'
-Bundle 'mhinz/vim-tmuxify'
-Bundle 'ervandew/supertab'
-Bundle 'saltstack/salt-vim'
+Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-markdown'
+Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'kien/ctrlp.vim'
+Plugin 'mileszs/ack.vim'
+Plugin 'matchit.zip'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'majutsushi/tagbar'
+Plugin 'groenewege/vim-less'
+Plugin 'ap/vim-css-color'
+Plugin 'thinca/vim-fontzoom'
+Plugin 'mhinz/vim-tmuxify'
+Plugin 'ervandew/supertab'
+Plugin 'saltstack/salt-vim'
 
 filetype plugin indent on
 
