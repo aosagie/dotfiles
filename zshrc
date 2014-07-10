@@ -65,6 +65,7 @@ alias vim='gvim -v'
 alias mvndebug='mvn -Dmaven.surefire.debug'
 alias sbtdebug='sbt -jvm-debug 5005'
 alias note=" note"
+alias youtube-dl=" youtube-dl"
 
 # Automatically run 'ls' upon entering a new directory
 function chpwd() {
