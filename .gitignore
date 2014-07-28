@@ -6,5 +6,6 @@ vim/bundle
 sbt/launchers
 sbt/**/boot
 sbt/**/staging
+sbt/*credentials
 target/
 project/
