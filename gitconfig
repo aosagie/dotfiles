@@ -17,6 +17,3 @@
 	g = grep --break --heading --line-number
 [push]
 	default = simple
-[diff]
-	;algorithm = histogram
-	algorithm = patience
