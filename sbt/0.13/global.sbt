@@ -1,6 +1,6 @@
-sbtassembly.Plugin.assemblySettings
+assemblySettings
 
-net.virtualvoid.sbt.graph.Plugin.graphSettings
+graphSettings
 
 Revolver.settings
 
