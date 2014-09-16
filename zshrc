@@ -106,6 +106,8 @@ bindkey -M viins 'jj' vi-cmd-mode #enter cmd mode w/ 'jj' instead of just 'ESC'
 bindkey -M vicmd 'u' undo
 bindkey -M vicmd 'q' push-line #store current line then restore it after you enter new command
 bindkey -M viins ' ' magic-space #history expansion works w/ space instead of just tab
+bindkey -M vicmd 'k' up-line-or-search
+bindkey -M vicmd 'j' down-line-or-search
 bindkey "\e[Z" reverse-menu-complete #shift+tab
 bindkey "^R" history-incremental-search-backward #ctrl+r
 bindkey "^[[A" up-line-or-search #up
