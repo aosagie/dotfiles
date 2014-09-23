@@ -2,3 +2,4 @@
 --type-set=log=.log
 --type-set=csv=.csv
 --ignore-dir=target
+--ignore-dir=.idea
