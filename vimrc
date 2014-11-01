@@ -52,7 +52,7 @@ set undolevels=100
 
 set listchars=eol:↲,trail:·,tab:▸\ ,precedes:«,extends:»
 
-set showbreak=↪
+"set showbreak=↪
 
 " set to auto read when a file is changed from the outside
 set autoread
