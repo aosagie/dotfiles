@@ -19,3 +19,8 @@ mkdirs := {
   IO.createDirectories(directories)
   println("Project directory structure created")
 }
+
+initialize := {
+  val ansi = System.getProperty("sbt.log.noformat", "false") != "true"
+  if (ansi) System.setProperty("scala.color", "true")
+}
