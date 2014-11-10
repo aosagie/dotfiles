@@ -140,4 +140,6 @@ precmd () {
 setopt prompt_subst
 RPROMPT='%F{blue}${vcs_info_msg_0_}%F{blue} %(?/%F{blue}/%F{red})% %{$reset_color%}'
 
+source /usr/local/src/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
