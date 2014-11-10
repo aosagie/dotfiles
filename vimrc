@@ -23,7 +23,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'groenewege/vim-less'
 Plugin 'ap/vim-css-color'
 Plugin 'thinca/vim-fontzoom'
-Plugin 'mhinz/vim-tmuxify'
+Plugin 'benmills/vimux'
 Plugin 'ervandew/supertab'
 Plugin 'saltstack/salt-vim'
 
@@ -279,4 +279,15 @@ function! s:AckMotion(type) abort
 
     let @@ = reg_save
 endfunction
+" }}}
+
+" Vimux {{{
+function! VimuxSlime()
+    call VimuxOpenRunner()
+    call VimuxSendText(@v)
+    call VimuxSendKeys("Enter")
+endfunction
+
+" If text is selected, save it in the v buffer and send that buffer it to tmux
+vmap <leader>v "vy :call VimuxSlime()<CR>
 " }}}
