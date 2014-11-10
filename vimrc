@@ -1,12 +1,12 @@
 set nocompatible
 set t_Co=256
 
+" Vundle {{{
 filetype off
-
 set rtp+=~/.vim/bundle/vundle
-call vundle#rc()
-Plugin 'gmarik/vundle'
+call vundle#begin()
 
+Plugin 'gmarik/vundle'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'tpope/vim-surround'
@@ -27,7 +27,10 @@ Plugin 'benmills/vimux'
 Plugin 'ervandew/supertab'
 Plugin 'saltstack/salt-vim'
 
+call vundle#end()
 filetype plugin indent on
+" }}}
+
 
 syntax enable
 
