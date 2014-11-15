@@ -8,6 +8,7 @@ call vundle#begin()
 
 Plugin 'gmarik/vundle'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+"Plugin 'bling/vim-airline'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
@@ -209,6 +210,8 @@ let Tlist_Show_One_File = 1
 let Tlist_GainFocus_On_ToggleOpen = 1
 
 let g:SuperTabDefaultCompletionType = "context"
+
+"let g:airline_powerline_fonts = 1
 " }}}
 
 if has('autocmd')
@@ -296,5 +299,5 @@ function! VimuxSlime()
 endfunction
 
 " If text is selected, save it in the v buffer and send that buffer it to tmux
-vmap <leader>v "vy :call VimuxSlime()<CR>
+vmap <silent><leader>v "vy :call VimuxSlime()<CR>
 " }}}
