@@ -31,7 +31,6 @@ call vundle#end()
 filetype plugin indent on
 " }}}
 
-
 syntax enable
 
 scriptencoding utf-8
@@ -169,6 +168,11 @@ command! StripTrailingWhite call StripTrailingWhite()
 " plugin config {{{
 nnoremap <leader><leader>a :Ack! ''<LEFT>
 
+map  / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
+map  n <Plug>(easymotion-next)
+map  N <Plug>(easymotion-prev)
+
 nnoremap <silent> <leader>t :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
 let g:tagbar_compact = 1
@@ -196,8 +200,8 @@ let g:ctrlp_custom_ignore = {
 
 let g:syntastic_enable_signs = 1
 let g:syntastic_mode_map = { 'mode': 'active',
-            \ 'active_filetypes': [],
-            \ 'passive_filetypes': ['java', 'scala'] }
+    \ 'active_filetypes': [],
+    \ 'passive_filetypes': ['java', 'scala'] }
 
 nmap <leader>g :TlistToggle<CR>:setlocal nocursorcolumn nolist<CR>
 let Tlist_Exit_OnlyWindow = 1
