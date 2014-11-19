@@ -177,6 +177,7 @@ map  N <Plug>(easymotion-prev)
 nnoremap <silent> <leader>t :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
 let g:tagbar_compact = 1
+let g:tagbar_left = 1
 
 let g:pymode_folding = 0
 let g:pymode_lint_cwindow = 0
