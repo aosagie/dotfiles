@@ -1,5 +1,3 @@
-assemblySettings
-
 graphSettings
 
 Revolver.settings
