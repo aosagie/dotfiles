@@ -9,3 +9,5 @@ sbt/**/staging
 sbt/*credentials
 target/
 project/
+
+viridity.sbt
