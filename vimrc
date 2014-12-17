@@ -88,9 +88,6 @@ set mouse=a
 set wildmenu
 set wildmode=list:longest,full
 
-" incremental and highlighted searching
-set incsearch hlsearch
-
 " highlight matching parenthesis
 set showmatch
 set matchtime=3
@@ -147,9 +144,6 @@ cmap w!! w !sudo tee % >/dev/null<CR>:e!<CR><CR>
 " use space bar to insert blank lines without leaving normal mode
 "noremap <silent> <space> :put =''<CR>
 
-" clear search highlighting
-map // :nohlsearch<CR>; echo 'Search highlight cleared'<CR>
-
 " folding settings
 set foldmethod=indent
 set foldnestmax=10
@@ -177,7 +171,6 @@ map  N <Plug>(easymotion-prev)
 nnoremap <silent> <leader>t :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
 let g:tagbar_compact = 1
-let g:tagbar_left = 1
 
 let g:pymode_folding = 0
 let g:pymode_lint_cwindow = 0
@@ -255,23 +248,11 @@ if has('autocmd')
     autocmd BufNewFile,BufRead *.pig set filetype=pig syntax=pig
 endif
 
-set background="dark"
-
-if has('gui_running')
-    colorscheme vividchalk
-
-    set guioptions=er
-    if has('win32')
-        set guifont=Consolas:h12
-    elseif has('gui_gtk2')
-        set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 11
-    endif
-else
-    colorscheme vividchalk
-
-    " don't underline cursorline
-    hi cursorline cterm=none
-endif
+" UI config
+colorscheme vividchalk
+set guioptions=er
+set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 11
+hi cursorline cterm=none
 
 " Ack motions {{{
 nnoremap <silent> <leader>a :set opfunc=<SID>AckMotion<CR>g@
