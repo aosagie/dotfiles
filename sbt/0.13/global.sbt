@@ -14,6 +14,7 @@ mkdirs := {
     dir1 <- Seq("main", "test")
     dir2 <- Seq("scala", "java", "resources")
   } yield baseDirectory.value / "src" / dir1 / dir2
+
   IO.createDirectories(directories)
   println("Project directory structure created")
 }
