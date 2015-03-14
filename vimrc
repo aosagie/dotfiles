@@ -27,6 +27,7 @@ Plugin 'thinca/vim-fontzoom'
 Plugin 'benmills/vimux'
 Plugin 'ervandew/supertab'
 Plugin 'saltstack/salt-vim'
+Plugin 'derekwyatt/vim-scala'
 
 call vundle#end()
 filetype plugin indent on
