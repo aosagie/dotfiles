@@ -22,4 +22,4 @@ with open(note_path, "a") as note_file:
 
     note_file.write(now.strftime("%Y-%m-%d %H:%M:%S") + " " + " ".join(sys.argv[1:]) + "\n")
 
-print("Noted!")
+print("Noted!!!")
