@@ -167,8 +167,8 @@ nnoremap <leader><leader>a :Ack! ''<LEFT>
 
 map  / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
-map  n <Plug>(easymotion-next)
-map  N <Plug>(easymotion-prev)
+"map  n <Plug>(easymotion-next)
+"map  N <Plug>(easymotion-prev)
 
 nnoremap <silent> <leader>t :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
@@ -207,6 +207,7 @@ let g:syntastic_mode_map = { 'mode': 'active',
 let g:SuperTabDefaultCompletionType = "context"
 
 "let g:airline_powerline_fonts = 1
+"let g:airline#extensions#tabline#enabled = 1
 " }}}
 
 if has('autocmd')
