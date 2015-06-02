@@ -131,6 +131,7 @@ vnore j gj
 vnore k gk
 nnoremap Y y$
 map <TAB> %
+
 " remap to use very magic (a.k.a. consistent) regex
 "nnoremap / /\v
 "cnoremap s/ s/\v
@@ -202,11 +203,6 @@ let g:syntastic_enable_signs = 1
 let g:syntastic_mode_map = { 'mode': 'active',
     \ 'active_filetypes': [],
     \ 'passive_filetypes': ['java', 'scala'] }
-
-nmap <leader>g :TlistToggle<CR>:setlocal nocursorcolumn nolist<CR>
-let Tlist_Exit_OnlyWindow = 1
-let Tlist_Show_One_File = 1
-let Tlist_GainFocus_On_ToggleOpen = 1
 
 let g:SuperTabDefaultCompletionType = "context"
 
