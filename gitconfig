@@ -17,3 +17,5 @@
 	g = grep --break --heading --line-number
 [push]
 	default = simple
+[core]
+	askpass =
