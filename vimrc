@@ -7,8 +7,8 @@ set rtp+=~/.vim/bundle/vundle
 call vundle#begin()
 
 Plugin 'gmarik/vundle'
-Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
-"Plugin 'bling/vim-airline'
+" Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'bling/vim-airline'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
@@ -67,7 +67,7 @@ set number relativenumber
 set noerrorbells novisualbell
 
 " ask for previous buffer to be saved or get rid of it
-set nohidden
+set hidden
 
 " search is case insensitive if search is all lowercase
 set ignorecase
@@ -187,10 +187,10 @@ let g:ctrlp_custom_ignore = {
     \ 'dir':  '\.git$\|\.hg$\|target$\|node_modules$\|\.svn$',
     \ 'file': '\.exe$\|\.so$\|\.dll$\|\.obj$\|\.pyc$\|\.jar$\|\.o$\|\.class$\|\.swf$\|\.png$\|\.gif$'
     \ }
-let g:ctrlp_prompt_mappings = {
-    \ 'AcceptSelection("e")': [],
-    \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
-    \ }
+" let g:ctrlp_prompt_mappings = {
+"     \ 'AcceptSelection("e")': [],
+"     \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
+"     \ }
 " doesn't work with ctrlp_custom_ignore
 "let g:ctrlp_user_command = {
     "\ 'types': {
@@ -207,8 +207,8 @@ let g:syntastic_mode_map = { 'mode': 'active',
 
 let g:SuperTabDefaultCompletionType = "context"
 
-"let g:airline_powerline_fonts = 1
-"let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 " }}}
 
 if has('autocmd')
