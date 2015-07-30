@@ -191,14 +191,13 @@ let g:ctrlp_custom_ignore = {
 "     \ 'AcceptSelection("e")': [],
 "     \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
 "     \ }
-" doesn't work with ctrlp_custom_ignore
-"let g:ctrlp_user_command = {
-    "\ 'types': {
-        "\ 1: ['.hg/', 'hg --cwd %s locate -I .'],
-        "\ 2: ['.git/', 'cd %s && git ls-files'],
-    "\ },
-    "\ 'fallback': 'find %s -type f'
-    "\ }
+let g:ctrlp_user_command = {
+    \ 'types': {
+       \ 1: ['.git/', 'cd %s && git ls-files'],
+       \ 2: ['.hg/', 'hg --cwd %s locate -I .'],
+    \ },
+    \ 'fallback': 'find %s -type f'
+    \ }
 
 let g:syntastic_enable_signs = 1
 let g:syntastic_mode_map = { 'mode': 'active',
