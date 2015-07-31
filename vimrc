@@ -7,7 +7,6 @@ set rtp+=~/.vim/bundle/vundle
 call vundle#begin()
 
 Plugin 'gmarik/vundle'
-" Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'bling/vim-airline'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'tpope/vim-surround'
@@ -116,9 +115,9 @@ set switchbuf=useopen,usetab
 
 " backup and swap directory
 set backup
-set undodir=~/.vim/tmp/undo//
-set backupdir=~/.vim/tmp/backup//
-set directory=~/.vim/tmp/swap//
+set undodir=~/.vim/tmp/undo
+set backupdir=~/.vim/tmp/backup
+set directory=~/.vim/tmp/swap
 
 set dictionary=/usr/share/dict/words
 
@@ -133,19 +132,8 @@ vnore k gk
 nnoremap Y y$
 map <TAB> %
 
-" remap to use very magic (a.k.a. consistent) regex
-"nnoremap / /\v
-"cnoremap s/ s/\v
-
-" alternate ways to scroll through the popup
-"inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
-"inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<TAB>"
-
 " sudo to write
 cmap w!! w !sudo tee % >/dev/null<CR>:e!<CR><CR>
-
-" use space bar to insert blank lines without leaving normal mode
-"noremap <silent> <space> :put =''<CR>
 
 " folding settings
 set foldmethod=indent
@@ -168,8 +156,8 @@ nnoremap <leader><leader>a :Ack! ''<LEFT>
 
 map  / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
-"map  n <Plug>(easymotion-next)
-"map  N <Plug>(easymotion-prev)
+map  n <Plug>(easymotion-next)
+map  N <Plug>(easymotion-prev)
 
 nnoremap <silent> <leader>t :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
@@ -182,15 +170,10 @@ let g:ctrlp_by_filename = 1
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_dotfiles = 0
 let g:ctrlp_max_height = 20
-"let g:ctrlp_use_caching = 0
 let g:ctrlp_custom_ignore = {
     \ 'dir':  '\.git$\|\.hg$\|target$\|node_modules$\|\.svn$',
     \ 'file': '\.exe$\|\.so$\|\.dll$\|\.obj$\|\.pyc$\|\.jar$\|\.o$\|\.class$\|\.swf$\|\.png$\|\.gif$'
     \ }
-" let g:ctrlp_prompt_mappings = {
-"     \ 'AcceptSelection("e")': [],
-"     \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
-"     \ }
 let g:ctrlp_user_command = {
     \ 'types': {
        \ 1: ['.git/', 'cd %s && git ls-files'],
@@ -204,7 +187,7 @@ let g:syntastic_mode_map = { 'mode': 'active',
     \ 'active_filetypes': [],
     \ 'passive_filetypes': ['java', 'scala'] }
 
-let g:SuperTabDefaultCompletionType = "context"
+let g:jedi#completions_enabled = 0 " YouCompleteMe will handle this part
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
@@ -220,17 +203,6 @@ if has('autocmd')
         \ exe "normal! g`\"" |
         \ endif
 
-    " auto completion
-    autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-    autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS shiftwidth=2 tabstop=2
-    autocmd FileType html setlocal omnifunc=htmlcomplete#CompleteTags shiftwidth=2 tabstop=2
-    autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-    autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags shiftwidth=2 tabstop=2
-    set ofu=syntaxcomplete#Complete
-
-    " spell checking on text files
-    "autocmd BufEnter,BufNew *.txt set spell spelllang=en_gb
-
     " show special characters when not in insert mode
     autocmd VimEnter * set list
     autocmd InsertLeave * set list hlsearch
@@ -238,12 +210,6 @@ if has('autocmd')
 
     " GUI default turns this on, so turn it back off
     autocmd GUIEnter * set novisualbell
-
-    " compile LESS to CSS on save
-    autocmd BufWritePost,FileWritePost *.less :silent !lessc <afile> <afile>:p:r.css
-
-    " pig filetype detection
-    autocmd BufNewFile,BufRead *.pig set filetype=pig syntax=pig
 endif
 
 " UI config
