@@ -1,37 +1,29 @@
+call plug#begin()
+Plug 'bling/vim-airline'
+Plug 'Lokaltog/vim-easymotion'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-markdown'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-commentary'
+Plug 'scrooloose/syntastic'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'mileszs/ack.vim'
+Plug 'matchit.zip'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
+Plug 'davidhalter/jedi-vim'
+Plug 'marijnh/tern_for_vim', { 'do': 'npm install' }
+Plug 'majutsushi/tagbar'
+Plug 'groenewege/vim-less'
+Plug 'ap/vim-css-color'
+Plug 'thinca/vim-fontzoom'
+Plug 'benmills/vimux'
+Plug 'saltstack/salt-vim'
+Plug 'derekwyatt/vim-scala'
+call plug#end()
+
 set nocompatible
 set t_Co=256
-
-" Vundle {{{
-filetype off
-set rtp+=~/.vim/bundle/vundle
-call vundle#begin()
-
-Plugin 'gmarik/vundle'
-Plugin 'bling/vim-airline'
-Plugin 'Lokaltog/vim-easymotion'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-markdown'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-commentary'
-Plugin 'scrooloose/syntastic'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'mileszs/ack.vim'
-Plugin 'matchit.zip'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'davidhalter/jedi-vim'
-Plugin 'marijnh/tern_for_vim'
-Plugin 'majutsushi/tagbar'
-Plugin 'groenewege/vim-less'
-Plugin 'ap/vim-css-color'
-Plugin 'thinca/vim-fontzoom'
-Plugin 'benmills/vimux'
-Plugin 'saltstack/salt-vim'
-Plugin 'derekwyatt/vim-scala'
-
-call vundle#end()
-filetype plugin indent on
-" }}}
 
 syntax enable
 
@@ -182,10 +174,8 @@ let g:ctrlp_user_command = {
     \ 'fallback': 'find %s -type f'
     \ }
 
-let g:syntastic_enable_signs = 1
-let g:syntastic_mode_map = { 'mode': 'active',
-    \ 'active_filetypes': [],
-    \ 'passive_filetypes': ['java', 'scala'] }
+let g:syntastic_javascript_checkers = ['eslint']
+" let g:syntastic_disabled_filetypes = ['java', 'scala']
 
 let g:jedi#completions_enabled = 0 " YouCompleteMe will handle this part
 
