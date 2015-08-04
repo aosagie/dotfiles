@@ -92,7 +92,9 @@ set cursorline cursorcolumn colorcolumn=80
 set laststatus=2
 
 " 256 color support for term
-set term=screen-256color
+if !has('gui_running')
+    set term=screen-256color
+endif
 
 set lazyredraw
 
