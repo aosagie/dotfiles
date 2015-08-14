@@ -25,6 +25,7 @@ call plug#end()
 set nocompatible
 set t_Co=256
 
+filetype plugin indent on
 syntax enable
 
 scriptencoding utf-8
@@ -186,6 +187,8 @@ let g:airline#extensions#tabline#enabled = 1
 " }}}
 
 if has('autocmd')
+    autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
+
     " remove any trailing whitespace that is in the file
     " autocmd BufRead,BufWrite * if ! &bin | call StripTrailingWhite() | endif
 
