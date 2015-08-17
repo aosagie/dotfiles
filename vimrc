@@ -187,6 +187,8 @@ let g:airline#extensions#tabline#enabled = 1
 " }}}
 
 if has('autocmd')
+    autocmd BufRead,BufNewFile *.json set filetype=json
+    autocmd BufNewFile,BufRead *.raml set filetype=yaml foldmethod=indent
     autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 
     " remove any trailing whitespace that is in the file
