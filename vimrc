@@ -10,7 +10,7 @@ Plug 'scrooloose/syntastic'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'mileszs/ack.vim'
 Plug 'matchit.zip'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'davidhalter/jedi-vim'
 Plug 'marijnh/tern_for_vim', { 'do': 'npm install' }
 Plug 'majutsushi/tagbar'
