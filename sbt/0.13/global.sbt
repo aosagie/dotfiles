@@ -1,5 +1,3 @@
-graphSettings
-
 Revolver.settings
 
 shellPrompt := { state =>
