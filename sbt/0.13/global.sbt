@@ -1,5 +1,3 @@
-Revolver.settings
-
 shellPrompt := { state =>
   import scala.Console.{CYAN, RESET}
   s"sbt ($CYAN${name.value}$RESET)❯ "
