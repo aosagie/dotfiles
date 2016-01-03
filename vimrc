@@ -212,7 +212,8 @@ endif
 " UI config
 colorscheme vividchalk
 set guioptions=er
-set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 11
+" set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 11
+set guifont=Roboto\ Mono\ for\ Powerline\ 12
 hi cursorline cterm=none
 
 " Ack motions {{{
