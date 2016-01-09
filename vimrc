@@ -253,5 +253,5 @@ function! VimuxSlime()
 endfunction
 
 " If text is selected, save it in the v buffer and send that buffer it to tmux
-vmap <silent><leader>v "vy :call VimuxSlime()<CR>
+vmap <silent> <leader>v "vy :call VimuxSlime()<CR>
 " }}}
