@@ -8,6 +8,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'scrooloose/syntastic'
 Plug 'ctrlpvim/ctrlp.vim'
+" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+" Plug 'junegunn/fzf.vim'
 Plug 'mileszs/ack.vim'
 Plug 'matchit.zip'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
@@ -134,6 +136,7 @@ cmap w!! w !sudo tee % >/dev/null<CR>:e!<CR><CR>
 set foldmethod=indent
 set foldnestmax=10
 set nofoldenable
+set foldlevel=10 "equal to foldnestmax so initial fold calls don't fold everything
 
 " omnicomplete progressive completion
 set completeopt=longest,menuone ",preview
@@ -148,6 +151,9 @@ command! StripTrailingWhite call StripTrailingWhite()
 
 " plugin config {{{
 nnoremap <leader><leader>a :Ack! ''<LEFT>
+if executable('pt') " Trying platinum searcher out for now
+  let g:ackprg = 'pt --nogroup --nocolor --column'
+endif
 
 map  / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
