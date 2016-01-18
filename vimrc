@@ -1,6 +1,6 @@
 call plug#begin()
-Plug 'bling/vim-airline'
-Plug 'Lokaltog/vim-easymotion'
+Plug 'vim-airline/vim-airline'
+Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-markdown'
@@ -14,7 +14,7 @@ Plug 'mileszs/ack.vim'
 Plug 'matchit.zip'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'davidhalter/jedi-vim'
-Plug 'marijnh/tern_for_vim', { 'do': 'npm install' }
+Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 Plug 'majutsushi/tagbar'
 Plug 'groenewege/vim-less'
 Plug 'ap/vim-css-color'
