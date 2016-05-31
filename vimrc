@@ -239,7 +239,7 @@ function! s:AckMotion(type) abort
 
     call s:CopyMotionForType(a:type)
 
-    execute "normal! :Ack! --literal " . shellescape(@@) . "\<cr>"
+    execute "normal! :Ack! " . shellescape(@@) . "\<cr>"
 
     let @@ = reg_save
 endfunction

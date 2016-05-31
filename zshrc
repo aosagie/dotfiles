@@ -50,18 +50,18 @@ zstyle ':completion:*' insert-tab pending
 setopt histignorealldups sharehistory
 
 # Aliases
-alias ls='ls -F --color=auto --group-directories-first'
-alias l='ls'
-alias ll='ls -lah'
-alias lll='tree -d'
+# commands prefixed with an empty space are not stored in history
+alias ls=' ls -F --color=auto --group-directories-first'
+alias l=' ls'
+alias ll=' ls -lah'
+alias lll=' tree -d'
 alias rm='rm -I'
 alias mv='mv -i'
 alias cp='cp -i'
 alias grep='grep --color=auto'
 alias jps='jps -l'
 alias vim='gvim -v'
-alias mvndebug='mvn -Dmaven.surefire.debug'
-alias sbtdebug='sbt -jvm-debug 5005'
+alias sbtDebug='sbt -jvm-debug 5005'
 alias note=" note"
 alias youtube-dl=" youtube-dl"
 
