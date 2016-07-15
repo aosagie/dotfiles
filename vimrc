@@ -8,8 +8,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'scrooloose/syntastic'
 Plug 'ctrlpvim/ctrlp.vim'
-" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-" Plug 'junegunn/fzf.vim'
 Plug 'mileszs/ack.vim'
 Plug 'matchit.zip'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }

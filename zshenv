@@ -1,8 +1,9 @@
 export EDITOR="vim"
 export TERM="xterm-256color"
 export HOME_BIN="$HOME/bin"
-export JAVA_HOME="/usr/java/default/"
-export NODE_PATH="/usr/local/lib/node_modules/:/usr/local/lib/node/"
+# export JAVA_HOME="/usr/java/default/"
+export JAVA_HOME="/usr/lib/jvm/java"
+# export NODE_PATH="/usr/local/lib/node_modules/:/usr/local/lib/node/"
 export SPARK_HOME="/opt/spark/"
 export VAGRANT_DEFAULT_PROVIDER=virtualbox
 
