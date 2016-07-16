@@ -20,6 +20,7 @@ Plug 'thinca/vim-fontzoom'
 Plug 'benmills/vimux'
 Plug 'saltstack/salt-vim'
 Plug 'derekwyatt/vim-scala'
+Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
 
 set nocompatible
