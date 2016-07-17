@@ -99,6 +99,9 @@ setopt HIST_REDUCE_BLANKS
 
 setopt HIST_IGNORE_SPACE
 
+# allows Bash style comments on command line
+setopt interactivecomments
+
 # make backspace work normally in vi mode
 zle -A .backward-delete-char vi-backward-delete-char
 
