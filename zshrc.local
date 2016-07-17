@@ -1,17 +1,16 @@
-source proxies.sh
+source ~/proxies.sh
 
 path=($HOME/bin /usr/local/sbin $path)
 
-export EDITOR=vim
-
 alias vim="/usr/local/bin/vim"
+export EDITOR=vim
 
 # Configure zplug
 export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
+zplug "themes/bureau", from:oh-my-zsh
 zplug "plugins/vi-mode", from:oh-my-zsh
-zplug "themes/pygmalion", from:oh-my-zsh
 zplug "zsh-users/zsh-syntax-highlighting", nice:10
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-history-substring-search"

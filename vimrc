@@ -141,7 +141,7 @@ set foldlevel=10 "equal to foldnestmax so initial fold calls don't fold everythi
 set completeopt=longest,menuone ",preview
 
 " use Linux's default clipboard
-set clipboard=unnamedplus
+set clipboard^=unnamed,unnamedplus
 
 function! StripTrailingWhite()
     %s/\s\+$//ge
