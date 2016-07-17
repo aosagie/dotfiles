@@ -10,9 +10,9 @@ Plug 'scrooloose/syntastic'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'mileszs/ack.vim'
 Plug 'matchit.zip'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
-Plug 'davidhalter/jedi-vim'
-Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
+" Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+" Plug 'davidhalter/jedi-vim'
+" Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 Plug 'majutsushi/tagbar'
 Plug 'groenewege/vim-less'
 Plug 'ap/vim-css-color'
