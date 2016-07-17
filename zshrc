@@ -1,3 +1,19 @@
+# CONFIGURE ZPLUG
+export ZPLUG_HOME=/usr/local/opt/zplug
+source $ZPLUG_HOME/init.zsh
+
+zplug "themes/bureau", from:oh-my-zsh
+zplug "zsh-users/zsh-syntax-highlighting", nice:10
+zplug "zsh-users/zsh-completions"
+zplug "zsh-users/zsh-history-substring-search"
+zplug "thewtex/tmux-mem-cpu-load"
+
+if ! zplug check; then
+    zplug install
+fi
+
+zplug load --verbose
+
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.zsh_history
 HISTSIZE=100000
@@ -106,3 +122,5 @@ bindkey "^[[B" down-line-or-search #down
 stty -ixon -ixoff
 
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
