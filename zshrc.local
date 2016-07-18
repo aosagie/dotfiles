@@ -2,5 +2,4 @@ source ~/proxies.sh
 
 path=($HOME/bin /usr/local/sbin $path)
 
-alias vim="/usr/local/bin/vim"
-export EDITOR=vim
+export EDITOR=$(which vim)

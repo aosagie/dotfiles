@@ -118,6 +118,7 @@ bindkey "^R" history-incremental-search-backward #ctrl+r
 bindkey "^[[A" up-line-or-search #up
 bindkey "^[[B" down-line-or-search #down
 
+# turns off terminal driver flow control
 # fixes inability to ctrl-s horizontal splits in terminal vim's CtrlP
 stty -ixon -ixoff
 
