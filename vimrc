@@ -10,9 +10,9 @@ Plug 'scrooloose/syntastic'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'mileszs/ack.vim'
 Plug 'matchit.zip'
-" Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
-" Plug 'davidhalter/jedi-vim'
-" Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+Plug 'davidhalter/jedi-vim'
+Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 Plug 'majutsushi/tagbar'
 Plug 'groenewege/vim-less'
 Plug 'ap/vim-css-color'
@@ -21,6 +21,7 @@ Plug 'benmills/vimux'
 Plug 'saltstack/salt-vim'
 Plug 'derekwyatt/vim-scala'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'pearofducks/ansible-vim'
 call plug#end()
 
 set nocompatible
