@@ -1,5 +1,0 @@
-source ~/proxies.sh
-
-path=($HOME/bin /usr/local/sbin $path)
-
-export EDITOR=$(which vim)

@@ -1,19 +1,13 @@
-export EDITOR="vim"
+export EDITOR=$(which vim)
 export TERM="xterm-256color"
-export HOME_BIN="$HOME/bin"
-# export JAVA_HOME="/usr/java/default/"
-export JAVA_HOME="/usr/lib/jvm/java"
-# export NODE_PATH="/usr/local/lib/node_modules/:/usr/local/lib/node/"
-export SPARK_HOME="/opt/spark/"
-export VAGRANT_DEFAULT_PROVIDER=virtualbox
 
-typeset -U path # ensure unique paths
-path=($HOME_BIN $path)
-fpath=(/usr/local/src/zsh-completions/src/ $fpath)
+case "$OSTYPE" in
+  linux*)  export JAVA_HOME="/usr/lib/jvm/java" ;;
+  darwin*) export JAVA_HOME=$(/usr/libexec/java_home) ;;
+  *)       echo "unknown OSTYPE: $OSTYPE" ;;
+esac
 
-# virtualenv and virtualenvwrapper configuration
-# export WORKON_HOME="$HOME/.virtualenvs"
-# export PROJECT_HOME="$HOME/Code"
-# export VIRTUALENV_USE_DISTRIBUTE=1
+typeset -U path # enforce unique paths
+path=($HOME/bin /usr/local/sbin $path)
 
 [ -f ~/.zshenv.local ] && source ~/.zshenv.local
