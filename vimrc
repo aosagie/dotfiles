@@ -217,10 +217,14 @@ endif
 
 " UI config
 colorscheme vividchalk
-set guioptions=er
-" set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 11
-set guifont=Roboto\ Mono\ for\ Powerline\ 12
 hi cursorline cterm=none
+set guioptions=er
+
+if has('gui_macvim')
+    set guifont=Source\ Code\ Pro:h13
+else
+    set guifont=Roboto\ Mono\ for\ Powerline\ 12 "TODO: use source code pro in linux too
+endif
 
 " Ack motions {{{
 nnoremap <silent> <leader>a :set opfunc=<SID>AckMotion<CR>g@
