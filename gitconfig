@@ -12,8 +12,8 @@
 [color]
 	ui = auto
 [alias]
-	lg = log --graph --pretty=format:'%C(auto)%h%d%Creset %s %C(cyan)(%cr) %C(blue)<%an>%Creset' --abbrev-commit --date=relative
-	g = grep --break --heading --line-number
+	ll = log --stat --abbrev-commit
+	lg = log --color --graph --pretty=format:'%C(bold white)%h%Creset %C(auto)%d%Creset %s %C(bold green)(%cr)%Creset %C(bold blue)<%an>%Creset'
 [push]
 	default = simple
 [core]

@@ -18,9 +18,10 @@ Plug 'groenewege/vim-less'
 Plug 'ap/vim-css-color'
 Plug 'thinca/vim-fontzoom'
 Plug 'benmills/vimux'
-Plug 'saltstack/salt-vim'
+" Plug 'saltstack/salt-vim'
 Plug 'derekwyatt/vim-scala'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'pearofducks/ansible-vim'
 call plug#end()
 
 set nocompatible
@@ -141,7 +142,7 @@ set foldlevel=10 "equal to foldnestmax so initial fold calls don't fold everythi
 set completeopt=longest,menuone ",preview
 
 " use Linux's default clipboard
-set clipboard=unnamedplus
+set clipboard^=unnamed,unnamedplus
 
 function! StripTrailingWhite()
     %s/\s\+$//ge

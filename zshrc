@@ -1,3 +1,19 @@
+# CONFIGURE ZPLUG
+export ZPLUG_HOME=/usr/local/opt/zplug
+source $ZPLUG_HOME/init.zsh
+
+zplug "themes/bureau", from:oh-my-zsh
+zplug "zsh-users/zsh-syntax-highlighting", nice:10
+zplug "zsh-users/zsh-completions"
+zplug "zsh-users/zsh-history-substring-search"
+zplug "thewtex/tmux-mem-cpu-load"
+
+if ! zplug check; then
+    zplug install
+fi
+
+zplug load --verbose
+
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.zsh_history
 HISTSIZE=100000
@@ -35,35 +51,19 @@ autoload -U colors && colors
 
 # Set up the prompt
 autoload -Uz promptinit && promptinit
-prompt adam1
-
-# Launch file types with their associated handlers
-autoload -U zsh-mime-setup
-zstyle ':mime:.txt:' handler $EDITOR %s
-zstyle ':mime:.pdf:' handler evince %s
-zsh-mime-setup
 
 # Pasting with tabs doesn't perform completion
 zstyle ':completion:*' insert-tab pending
 
-# Multi-terminal history
-setopt histignorealldups sharehistory
-
 # Aliases
 # commands prefixed with an empty space are not stored in history
-alias ls=' ls -F --color=auto --group-directories-first'
-alias l=' ls'
+alias ls=' ls -G'
 alias ll=' ls -lah'
-alias lll=' tree -d'
-alias rm='rm -I'
+alias rm='rm -i'
 alias mv='mv -i'
 alias cp='cp -i'
 alias grep='grep --color=auto'
-alias jps='jps -l'
-alias vim='gvim -v'
-alias sbtDebug='sbt -jvm-debug 5005'
-alias note=" note"
-alias youtube-dl=" youtube-dl"
+alias note=' note' #Commands preceeded by a space aren't stored in history
 
 # Automatically run 'ls' upon entering a new directory
 function chpwd() {
@@ -99,8 +99,14 @@ setopt HIST_REDUCE_BLANKS
 
 setopt HIST_IGNORE_SPACE
 
-# allows Bash style comments on command line
+# Command substitution in the prompt
+setopt PROMPT_SUBST
+
+# Allow comments in the command line
 setopt interactivecomments
+
+# Multi-terminal history
+setopt histignorealldups sharehistory
 
 # make backspace work normally in vi mode
 zle -A .backward-delete-char vi-backward-delete-char
@@ -116,33 +122,10 @@ bindkey "^R" history-incremental-search-backward #ctrl+r
 bindkey "^[[A" up-line-or-search #up
 bindkey "^[[B" down-line-or-search #down
 
-# virtualenv and virtualenvwrapper configuration
-#source /usr/bin/virtualenvwrapper.sh
-
+# turns off terminal driver flow control
 # fixes inability to ctrl-s horizontal splits in terminal vim's CtrlP
 stty -ixon -ixoff
 
-# git and svn info in the command line
-autoload -Uz vcs_info
-
-zstyle ':vcs_info:*' stagedstr ' %F{28}●'
-zstyle ':vcs_info:*' unstagedstr ' %F{11}●'
-zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:(sv[nk]|bzr):*' branchformat '%b%F{1}:%F{11}%r'
-zstyle ':vcs_info:*' enable git svn
-precmd () {
-    if [[ -z $(git ls-files --other --exclude-standard 2> /dev/null) ]] {
-        zstyle ':vcs_info:*' formats ' [ %F{green}%b%c%u%F{blue} ]'
-    } else {
-        zstyle ':vcs_info:*' formats ' [ %F{green}%b%c%u %F{red}●%F{blue} ]'
-    }
-
-    vcs_info
-}
-
-setopt prompt_subst
-RPROMPT='%F{blue}${vcs_info_msg_0_}%F{blue} %(?/%F{blue}/%F{red})% %{$reset_color%}'
-
-source /usr/local/src/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
