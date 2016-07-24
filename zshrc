@@ -57,7 +57,7 @@ zstyle ':completion:*' insert-tab pending
 
 # Aliases
 # commands prefixed with an empty space are not stored in history
-alias ls=' ls -G'
+alias ls=' ls -G' #TODO: this only works for OSX. Use the following in linux: alias ls=' ls -F --color=auto --group-directories-first'
 alias ll=' ls -lah'
 alias rm='rm -i'
 alias mv='mv -i'
