@@ -55,9 +55,6 @@ autoload -Uz promptinit && promptinit
 # Pasting with tabs doesn't perform completion
 zstyle ':completion:*' insert-tab pending
 
-# Multi-terminal history
-setopt histignorealldups sharehistory
-
 # Aliases
 # commands prefixed with an empty space are not stored in history
 alias ls=' ls -G'
@@ -66,6 +63,7 @@ alias rm='rm -i'
 alias mv='mv -i'
 alias cp='cp -i'
 alias grep='grep --color=auto'
+alias note=' note' #Commands preceeded by a space aren't stored in history
 
 # Automatically run 'ls' upon entering a new directory
 function chpwd() {
@@ -101,8 +99,14 @@ setopt HIST_REDUCE_BLANKS
 
 setopt HIST_IGNORE_SPACE
 
-# enable command substitution in the prompt
+# Command substitution in the prompt
 setopt PROMPT_SUBST
+
+# Allow comments in the command line
+setopt interactivecomments
+
+# Multi-terminal history
+setopt histignorealldups sharehistory
 
 # make backspace work normally in vi mode
 zle -A .backward-delete-char vi-backward-delete-char
