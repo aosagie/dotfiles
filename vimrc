@@ -223,7 +223,8 @@ set guioptions=er
 if has('gui_macvim')
     set guifont=Source\ Code\ Pro:h13
 else
-    set guifont=Roboto\ Mono\ for\ Powerline\ 12 "TODO: use source code pro in linux too
+    " set guifont=Roboto\ Mono\ for\ Powerline\ 12
+    set guifont=Source\ Code\ Pro\ 13
 endif
 
 " Ack motions {{{
