@@ -12,7 +12,7 @@ if ! zplug check; then
     zplug install
 fi
 
-zplug load --verbose
+zplug load #--verbose
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.zsh_history
@@ -59,7 +59,8 @@ zstyle ':completion:*' insert-tab pending
 # commands prefixed with an empty space are not stored in history
 case "$OSTYPE" in
   linux*)  alias ls=' ls -F --color=auto --group-directories-first' ;;
-  darwin*) alias ls=' ls -F -G' ;;
+  darwin*) alias ls=' gls -F --color=auto --group-directories-first' ;;
+  # darwin*) alias ls=' ls -F -G' ;;
   *)       echo "unknown OSTYPE: $OSTYPE" ;;
 esac
 alias ll=' ls -lah'
