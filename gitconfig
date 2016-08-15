@@ -18,3 +18,5 @@
 	default = simple
 [core]
 	askpass =
+[include]
+	path = ~/.gitconfig.local
