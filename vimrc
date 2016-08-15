@@ -22,6 +22,7 @@ Plug 'benmills/vimux'
 Plug 'derekwyatt/vim-scala'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'pearofducks/ansible-vim'
+Plug 'hashivim/vim-terraform'
 call plug#end()
 
 set nocompatible
