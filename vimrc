@@ -18,11 +18,11 @@ Plug 'groenewege/vim-less'
 Plug 'ap/vim-css-color'
 Plug 'thinca/vim-fontzoom'
 Plug 'benmills/vimux'
-" Plug 'saltstack/salt-vim'
 Plug 'derekwyatt/vim-scala'
 Plug 'christoomey/vim-tmux-navigator'
+" Plug 'saltstack/salt-vim'
+" Plug 'hashivim/vim-terraform'
 Plug 'pearofducks/ansible-vim'
-Plug 'hashivim/vim-terraform'
 call plug#end()
 
 set nocompatible
@@ -168,9 +168,7 @@ let g:tagbar_compact = 1
 let g:pymode_folding = 0
 let g:pymode_lint_cwindow = 0
 
-let g:ctrlp_by_filename = 1
 let g:ctrlp_working_path_mode = 0
-let g:ctrlp_dotfiles = 0
 let g:ctrlp_max_height = 20
 let g:ctrlp_custom_ignore = {
     \ 'dir':  '\.git$\|\.hg$\|target$\|node_modules$\|\.svn$',
@@ -178,7 +176,7 @@ let g:ctrlp_custom_ignore = {
     \ }
 let g:ctrlp_user_command = {
     \ 'types': {
-       \ 1: ['.git/', 'cd %s && git ls-files'],
+       \ 1: ['.git', 'git ls-files --cached --others --exclude-standard %s'],
        \ 2: ['.hg/', 'hg --cwd %s locate -I .'],
     \ },
     \ 'fallback': 'find %s -type f'
