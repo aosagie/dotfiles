@@ -23,6 +23,7 @@ Plug 'christoomey/vim-tmux-navigator'
 " Plug 'saltstack/salt-vim'
 " Plug 'hashivim/vim-terraform'
 Plug 'pearofducks/ansible-vim'
+" Plug 'jacoborus/tender'
 call plug#end()
 
 set nocompatible
