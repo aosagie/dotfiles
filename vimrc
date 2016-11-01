@@ -37,7 +37,7 @@ set encoding=utf-8
 set ttyfast
 set ttymouse=xterm2
 
-set wrap
+set nowrap
 
 set showmode showcmd
 
