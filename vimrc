@@ -8,7 +8,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'scrooloose/syntastic'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'mileszs/ack.vim'
+Plug 'mhinz/vim-grepper'
 Plug 'matchit.zip'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'davidhalter/jedi-vim'
@@ -151,10 +151,10 @@ endfunction
 command! StripTrailingWhite call StripTrailingWhite()
 
 " plugin config {{{
-nnoremap <leader><leader>a :Ack! ''<LEFT>
-if executable('pt') " Trying platinum searcher out for now
-  let g:ackprg = 'pt --nogroup --nocolor --column'
-endif
+nmap gs <plug>(GrepperOperator)
+xmap gs <plug>(GrepperOperator)
+
+let g:grepper = { 'tools': ['pt', 'ack', 'grep'] }
 
 map  / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
@@ -225,29 +225,6 @@ else
     " set guifont=Roboto\ Mono\ for\ Powerline\ 12
     set guifont=Source\ Code\ Pro\ 13
 endif
-
-" Ack motions {{{
-nnoremap <silent> <leader>a :set opfunc=<SID>AckMotion<CR>g@
-xnoremap <silent> <leader>a :<C-U>call <SID>AckMotion(visualmode())<CR>
-
-function! s:CopyMotionForType(type)
-    if a:type ==# 'v'
-        silent execute "normal! `<" . a:type . "`>y"
-    elseif a:type ==# 'char'
-        silent execute "normal! `[v`]y"
-    endif
-endfunction
-
-function! s:AckMotion(type) abort
-    let reg_save = @@
-
-    call s:CopyMotionForType(a:type)
-
-    execute "normal! :Ack! " . shellescape(@@) . "\<cr>"
-
-    let @@ = reg_save
-endfunction
-" }}}
 
 " Vimux {{{
 function! VimuxSlime()
