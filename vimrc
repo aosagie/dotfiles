@@ -68,15 +68,15 @@ set hidden
 set ignorecase
 set smartcase
 
-" makes backspace work over the following
+" full backspace support
 set backspace=2
 
 " spaces instead of tabs
 set expandtab
 set smarttab
-set shiftwidth=4
-set softtabstop=4
-set tabstop=4
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
 
 " full mouse support
 set mouse=a
@@ -194,7 +194,6 @@ let g:airline#extensions#tabline#enabled = 1
 if has('autocmd')
     autocmd BufRead,BufNewFile *.json set filetype=json
     autocmd BufNewFile,BufRead *.raml set filetype=yaml foldmethod=indent
-    autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 
     " remove any trailing whitespace that is in the file
     " autocmd BufRead,BufWrite * if ! &bin | call StripTrailingWhite() | endif
