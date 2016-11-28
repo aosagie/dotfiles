@@ -1,8 +1,9 @@
-# CONFIGURE ZPLUG
+# Configure Zplug
 export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
-zplug "themes/bureau", from:oh-my-zsh
+zplug "themes/bureau", as:theme, from:oh-my-zsh
+# zplug "frmendes/geometry"
 zplug "zsh-users/zsh-syntax-highlighting", nice:10
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-history-substring-search"
@@ -113,7 +114,7 @@ setopt interactivecomments
 # Multi-terminal history
 setopt histignorealldups sharehistory
 
-# make backspace work normally in vi mode
+# Make backspace work normally in vi mode
 zle -A .backward-delete-char vi-backward-delete-char
 
 bindkey -M viins 'jj' vi-cmd-mode #enter cmd mode w/ 'jj' instead of just 'ESC'
