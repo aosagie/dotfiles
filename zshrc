@@ -4,7 +4,7 @@ source $ZPLUG_HOME/init.zsh
 
 zplug "themes/bureau", as:theme, from:oh-my-zsh
 # zplug "frmendes/geometry"
-zplug "zsh-users/zsh-syntax-highlighting", nice:10
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-history-substring-search"
 zplug "thewtex/tmux-mem-cpu-load"
