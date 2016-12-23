@@ -6,7 +6,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
-Plug 'scrooloose/syntastic'
+Plug 'neomake/neomake'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'mhinz/vim-grepper'
 Plug 'matchit.zip'
@@ -69,7 +69,7 @@ set ignorecase
 set smartcase
 
 " full backspace support
-set backspace=2
+set backspace=indent,eol,start
 
 " spaces instead of tabs
 set expandtab
@@ -182,36 +182,33 @@ let g:ctrlp_user_command = {
     \ 'fallback': 'find %s -type f'
     \ }
 
-let g:syntastic_javascript_checkers = ['eslint']
-" let g:syntastic_disabled_filetypes = ['java', 'scala']
-
 let g:jedi#completions_enabled = 0 " YouCompleteMe will handle this part
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 " }}}
 
-if has('autocmd')
-    autocmd BufRead,BufNewFile *.json set filetype=json
-    autocmd BufNewFile,BufRead *.raml set filetype=yaml foldmethod=indent
+autocmd BufWritePost * Neomake
 
-    " remove any trailing whitespace that is in the file
-    " autocmd BufRead,BufWrite * if ! &bin | call StripTrailingWhite() | endif
+autocmd BufRead,BufNewFile *.json set filetype=json
+autocmd BufNewFile,BufRead *.raml set filetype=yaml foldmethod=indent
 
-    " restore last position in file if possible
-    autocmd BufReadPost *
-        \ if line("'\"") > 1 && line("'\"") <= line("$") |
-        \ exe "normal! g`\"" |
-        \ endif
+" remove any trailing whitespace that is in the file
+" autocmd BufRead,BufWrite * if ! &bin | call StripTrailingWhite() | endif
 
-    " show special characters when not in insert mode
-    autocmd VimEnter * set list
-    autocmd InsertLeave * set list hlsearch
-    autocmd InsertEnter * set nolist nohlsearch
+" restore last position in file if possible
+autocmd BufReadPost *
+    \ if line("'\"") > 1 && line("'\"") <= line("$") |
+    \ exe "normal! g`\"" |
+    \ endif
 
-    " GUI default turns this on, so turn it back off
-    autocmd GUIEnter * set novisualbell
-endif
+" show special characters when not in insert mode
+autocmd VimEnter * set list
+autocmd InsertLeave * set list hlsearch
+autocmd InsertEnter * set nolist nohlsearch
+
+" GUI default turns this on, so turn it back off
+autocmd GUIEnter * set novisualbell
 
 " UI config
 colorscheme vividchalk
