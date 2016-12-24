@@ -194,6 +194,8 @@ let g:jedi#completions_enabled = 0 " YouCompleteMe will handle this part
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
+
+let g:neomake_open_list = 2
 " }}}
 
 autocmd BufWritePost * Neomake
