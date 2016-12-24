@@ -7,7 +7,9 @@ Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'neomake/neomake'
-Plug 'ctrlpvim/ctrlp.vim'
+" Plug 'ctrlpvim/ctrlp.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
+Plug 'junegunn/fzf.vim'
 Plug 'mhinz/vim-grepper'
 Plug 'matchit.zip'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
@@ -154,7 +156,7 @@ command! StripTrailingWhite call StripTrailingWhite()
 nmap gs <plug>(GrepperOperator)
 xmap gs <plug>(GrepperOperator)
 
-let g:grepper = { 'tools': ['pt', 'ack', 'grep'] }
+let g:grepper = { 'tools': ['rg', 'ack', 'grep'] }
 
 map  / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
@@ -168,19 +170,25 @@ let g:tagbar_compact = 1
 let g:pymode_folding = 0
 let g:pymode_lint_cwindow = 0
 
-let g:ctrlp_working_path_mode = 0
-let g:ctrlp_max_height = 20
-let g:ctrlp_custom_ignore = {
-    \ 'dir':  '\.git$\|\.hg$\|target$\|node_modules$\|\.svn$',
-    \ 'file': '\.exe$\|\.so$\|\.dll$\|\.obj$\|\.pyc$\|\.jar$\|\.o$\|\.class$\|\.swf$\|\.png$\|\.gif$'
+let g:fzf_action = {
+    \ 'ctrl-s': 'split',
+    \ 'ctrl-v': 'vsplit'
     \ }
-let g:ctrlp_user_command = {
-    \ 'types': {
-       \ 1: ['.git', 'git ls-files --cached --others --exclude-standard %s'],
-       \ 2: ['.hg/', 'hg --cwd %s locate -I .'],
-    \ },
-    \ 'fallback': 'find %s -type f'
-    \ }
+nnoremap <C-P> :Files<CR>
+
+" let g:ctrlp_working_path_mode = 0
+" let g:ctrlp_max_height = 20
+" let g:ctrlp_custom_ignore = {
+"     \ 'dir':  '\.git$\|\.hg$\|target$\|node_modules$\|\.svn$',
+"     \ 'file': '\.exe$\|\.so$\|\.dll$\|\.obj$\|\.pyc$\|\.jar$\|\.o$\|\.class$\|\.swf$\|\.png$\|\.gif$'
+"     \ }
+" let g:ctrlp_user_command = {
+"     \ 'types': {
+"        \ 1: ['.git', 'git ls-files --cached --others --exclude-standard %s'],
+"        \ 2: ['.hg/', 'hg --cwd %s locate -I .'],
+"     \ },
+"     \ 'fallback': 'find %s -type f'
+"     \ }
 
 let g:jedi#completions_enabled = 0 " YouCompleteMe will handle this part
 
