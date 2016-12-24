@@ -174,7 +174,7 @@ let g:fzf_action = {
     \ 'ctrl-s': 'split',
     \ 'ctrl-v': 'vsplit'
     \ }
-nnoremap <C-P> :Files<CR>
+nnoremap <C-P> :Files!<CR>
 
 " let g:ctrlp_working_path_mode = 0
 " let g:ctrlp_max_height = 20
