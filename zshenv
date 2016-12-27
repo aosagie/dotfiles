@@ -15,6 +15,8 @@ case "$OSTYPE" in
       echo "unknown OSTYPE: $OSTYPE" ;;
 esac
 
+export FZF_DEFAULT_COMMAND="rg --files --follow"
+
 typeset -U path # enforce unique paths
 path=($HOME/bin /usr/local/sbin $path)
 
