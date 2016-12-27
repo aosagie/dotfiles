@@ -120,7 +120,6 @@ zle -A .backward-delete-char vi-backward-delete-char
 bindkey -M viins 'jj' vi-cmd-mode #enter cmd mode w/ 'jj' instead of just 'ESC'
 bindkey -M vicmd 'u' undo
 bindkey -M vicmd 'q' push-line #store current line then restore it after you enter new command
-bindkey -M viins ' ' magic-space #history expansion works w/ space instead of just tab
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
 bindkey "\e[Z" reverse-menu-complete #shift+tab
