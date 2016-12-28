@@ -1,4 +1,4 @@
-export TERM="xterm-256color"
+[[ -z $TMUX ]] && export TERM="xterm-256color" #If TMUX is on then let it handle the term colors
 
 case "$OSTYPE" in
   linux*)

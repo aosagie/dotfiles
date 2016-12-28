@@ -97,10 +97,10 @@ set cursorline cursorcolumn colorcolumn=80
 " enhanced status line
 set laststatus=2
 
-" 256 color support for term
-if !has('gui_running')
-    set term=screen-256color
-endif
+" " 256 color support for term
+" if !has('gui_running')
+"     set term=screen-256color
+" endif
 
 set lazyredraw
 
