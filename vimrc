@@ -7,7 +7,6 @@ Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'neomake/neomake'
-" Plug 'ctrlpvim/ctrlp.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'mhinz/vim-grepper'
@@ -22,8 +21,6 @@ Plug 'thinca/vim-fontzoom'
 Plug 'benmills/vimux'
 Plug 'derekwyatt/vim-scala'
 Plug 'christoomey/vim-tmux-navigator'
-" Plug 'saltstack/salt-vim'
-" Plug 'hashivim/vim-terraform'
 Plug 'pearofducks/ansible-vim'
 call plug#end()
 
@@ -176,20 +173,6 @@ let g:fzf_action = {
     \ }
 nnoremap <C-P> :Files!<CR>
 
-" let g:ctrlp_working_path_mode = 0
-" let g:ctrlp_max_height = 20
-" let g:ctrlp_custom_ignore = {
-"     \ 'dir':  '\.git$\|\.hg$\|target$\|node_modules$\|\.svn$',
-"     \ 'file': '\.exe$\|\.so$\|\.dll$\|\.obj$\|\.pyc$\|\.jar$\|\.o$\|\.class$\|\.swf$\|\.png$\|\.gif$'
-"     \ }
-" let g:ctrlp_user_command = {
-"     \ 'types': {
-"        \ 1: ['.git', 'git ls-files --cached --others --exclude-standard %s'],
-"        \ 2: ['.hg/', 'hg --cwd %s locate -I .'],
-"     \ },
-"     \ 'fallback': 'find %s -type f'
-"     \ }
-
 let g:jedi#completions_enabled = 0 " YouCompleteMe will handle this part
 
 let g:airline_powerline_fonts = 1
@@ -202,9 +185,6 @@ autocmd BufWritePost * Neomake
 
 autocmd BufRead,BufNewFile *.json set filetype=json
 autocmd BufNewFile,BufRead *.raml set filetype=yaml foldmethod=indent
-
-" remove any trailing whitespace that is in the file
-" autocmd BufRead,BufWrite * if ! &bin | call StripTrailingWhite() | endif
 
 " restore last position in file if possible
 autocmd BufReadPost *
