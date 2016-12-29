@@ -1,5 +1,0 @@
---type-set=conf=.conf,.properties,.xml
---type-set=log=.log
---type-set=csv=.csv
---ignore-dir=target
---ignore-dir=.idea
