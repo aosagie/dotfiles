@@ -4,6 +4,8 @@ source $ZPLUG_HOME/init.zsh
 
 zplug "themes/bureau", as:theme, from:oh-my-zsh
 # zplug "frmendes/geometry"
+# zplug "halfo/lambda-mod-zsh-theme", as:theme
+# zplug "oskarkrawczyk/honukai-iterm-zsh", as:theme
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-history-substring-search"
