@@ -17,6 +17,8 @@ fi
 
 zplug load #--verbose
 
+export PROMPT="❯ "
+
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.zsh_history
 HISTSIZE=100000
