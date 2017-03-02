@@ -19,6 +19,5 @@ esac
 
 typeset -U path # enforce unique paths
 path=($HOME/bin /usr/local/sbin $path)
-fpath=(/usr/local/share/zsh/functions/ $fpath)
 
 [ -f ~/.zshenv.local ] && source ~/.zshenv.local
