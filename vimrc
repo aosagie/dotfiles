@@ -6,7 +6,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
-Plug 'neomake/neomake'
+Plug 'w0rp/ale'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'mhinz/vim-grepper'
@@ -177,11 +177,7 @@ let g:jedi#completions_enabled = 0 " YouCompleteMe will handle this part
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-
-let g:neomake_open_list = 2
 " }}}
-
-autocmd BufWritePost * Neomake
 
 autocmd BufRead,BufNewFile *.json set filetype=json
 autocmd BufNewFile,BufRead *.raml set filetype=yaml foldmethod=indent
