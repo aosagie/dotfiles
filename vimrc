@@ -104,9 +104,6 @@ set lazyredraw
 " inform us when anything is changed via :
 set report=0
 
-" shorter timeout length for multi-character commands
-set timeoutlen=500
-
 " if file's already open in a window or tab use that instead of a buffer
 set switchbuf=useopen,usetab
 
