@@ -10,7 +10,7 @@ Plug 'w0rp/ale'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'mhinz/vim-grepper'
-Plug 'matchit.zip'
+Plug 'benjifisher/matchit.zip'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'davidhalter/jedi-vim'
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
