@@ -15,6 +15,7 @@
 	ll = log --stat --abbrev-commit
 	lg = log --color --graph --pretty=format:'%C(bold white)%h%Creset %C(auto)%d%Creset %s %C(bold green)(%cr)%Creset %C(bold blue)<%an>%Creset'
 	grep-all = "!f(){ git rev-list --all | xargs git grep \"$1\"; }; f"
+	recent = for-each-ref --count=10 --sort=-committerdate refs/heads/ --format="%(refname:short)"
 [push]
 	default = simple
 [core]
