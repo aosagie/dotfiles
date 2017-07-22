@@ -11,7 +11,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'mhinz/vim-grepper'
 Plug 'benjifisher/matchit.zip'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+Plug 'Shougo/neocomplete'
 Plug 'davidhalter/jedi-vim'
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 Plug 'majutsushi/tagbar'
@@ -170,20 +170,26 @@ let g:fzf_action = {
     \ }
 nnoremap <C-P> :Files!<CR>
 
-let g:jedi#completions_enabled = 0 " YouCompleteMe will handle this part
+let g:jedi#completions_enabled = 1
+let g:neocomplete#enable_at_startup = 1
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
+
+function! VimuxSlime()
+    call VimuxOpenRunner()
+    call VimuxSendText(@v)
+    call VimuxSendKeys("Enter")
+endfunction
+
+" If text is selected, save it in the v buffer and send that buffer it to tmux
+vmap <silent> <leader>v "vy :call VimuxSlime()<CR>
+
+" <TAB>: completion.
+inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 " }}}
 
 autocmd BufRead,BufNewFile *.json set filetype=json
-autocmd BufNewFile,BufRead *.raml set filetype=yaml foldmethod=indent
-
-" restore last position in file if possible
-autocmd BufReadPost *
-    \ if line("'\"") > 1 && line("'\"") <= line("$") |
-    \ exe "normal! g`\"" |
-    \ endif
 
 " show special characters when not in insert mode
 autocmd VimEnter * set list
@@ -204,14 +210,3 @@ else
     " set guifont=Roboto\ Mono\ for\ Powerline\ 12
     set guifont=Source\ Code\ Pro\ 13
 endif
-
-" Vimux {{{
-function! VimuxSlime()
-    call VimuxOpenRunner()
-    call VimuxSendText(@v)
-    call VimuxSendKeys("Enter")
-endfunction
-
-" If text is selected, save it in the v buffer and send that buffer it to tmux
-vmap <silent> <leader>v "vy :call VimuxSlime()<CR>
-" }}}
