@@ -1,25 +1,41 @@
 #!/usr/bin/env python
 
 import os
-import re
 import sys
+import fileinput
+import re
 from datetime import datetime
-from subprocess import Popen, PIPE
+from contextlib import closing
 
-note_path   = os.path.expanduser("~") + "/notes.txt"
-now         = datetime.now()
+note_file_path = os.path.expanduser('~/notes.txt')
+todo_prefix = '-'
+done_prefix = '*'
 
-# Get date of last line in notes
-last_line   = Popen(["tail", "-1", note_path], stdout=PIPE, stderr=PIPE).stdout.readline()
-date_match  = re.match('\d{4}-\d\d-\d\d', last_line)
-last_date   = date_match.group() if date_match is not None else None
+#TODO: handle empty and malformed lines in the file?
+#TODO: handle non-existant file?
 
-# Append a new note
-with open(note_path, "a") as note_file:
-    # Insert divider if current date is different than last note's date
-    if last_date != now.strftime("%Y-%m-%d") and last_date is not None:
-        note_file.write("-" * 30 + "\n")
+with open(note_file_path, 'r') as note_file:
+    todos = [line for line in note_file.readlines() if line.startswith(todo_prefix)]
 
-    note_file.write(now.strftime("%Y-%m-%d %H:%M:%S") + " " + " ".join(sys.argv[1:]) + "\n")
+if len(sys.argv) == 1:
+    for idx, line in enumerate(todos):
+        print '{} {}'.format(idx, line),
 
-print("Noted!!!")
+    print 'Which note are you done with?'
+elif len(sys.argv) == 2 and sys.argv[1].isdigit():
+    digit = int(sys.argv[1])
+    with closing(fileinput.FileInput(note_file_path, inplace=True)) as note_file:
+        for line in note_file:
+            if todos[digit] == line:
+                print re.sub(r'^' + todo_prefix, done_prefix, line),
+            else:
+                print line,
+
+    print 'Done!'
+else:
+    now = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    note = ' '.join(sys.argv[1:])
+    with open(note_file_path, 'a') as note_file:
+        note_file.write('{} {} {}\n'.format(todo_prefix, now, note))
+
+    print 'Noted!'
