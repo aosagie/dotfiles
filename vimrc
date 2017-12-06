@@ -19,9 +19,10 @@ Plug 'groenewege/vim-less'
 Plug 'ap/vim-css-color'
 Plug 'thinca/vim-fontzoom'
 Plug 'benmills/vimux'
-Plug 'derekwyatt/vim-scala'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'derekwyatt/vim-scala'
 Plug 'pearofducks/ansible-vim'
+Plug 'rust-lang/rust.vim'
 call plug#end()
 
 set nocompatible

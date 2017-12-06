@@ -18,6 +18,6 @@ case "$OSTYPE" in
 esac
 
 typeset -U path # enforce unique paths
-path=($HOME/bin /usr/local/sbin $path)
+path=($HOME/bin $HOME/.cargo/bin /usr/local/sbin $path)
 
 [ -f ~/.zshenv.local ] && source ~/.zshenv.local

@@ -22,3 +22,5 @@
 	askpass =
 [include]
 	path = ~/.gitconfig.local
+; [diff "ansible-vault"]
+; 	textconv = PAGER=cat ansible-vault view
