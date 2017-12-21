@@ -17,21 +17,25 @@ done_prefix = '*'
 with open(note_file_path, 'r') as note_file:
     todos = [line for line in note_file.readlines() if line.startswith(todo_prefix)]
 
+# List all notes
 if len(sys.argv) == 1:
     for idx, line in enumerate(todos):
         print '{} {}'.format(idx, line),
 
+    print '-'*30
     print 'Which note are you done with?'
+# Mark a note as done
 elif len(sys.argv) == 2 and sys.argv[1].isdigit():
     digit = int(sys.argv[1])
     with closing(fileinput.FileInput(note_file_path, inplace=True)) as note_file:
         for line in note_file:
-            if len(todos) > digit and todos[digit] == line:
+            if todos[digit:digit+1] == line:
                 print re.sub(r'^' + todo_prefix, done_prefix, line),
             else:
                 print line,
 
     print 'Done!'
+# Add a note
 else:
     now = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     note = ' '.join(sys.argv[1:])
