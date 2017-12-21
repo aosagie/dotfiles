@@ -7,6 +7,8 @@ sbt/**/boot
 sbt/**/staging
 sbt/*credentials
 sbt/**/templates
+sbt/**/zinc
+sbt/preloaded
 target/
 project/
 
