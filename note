@@ -11,9 +11,8 @@ note_file_path = os.path.expanduser('~/notes.txt')
 todo_prefix = '-'
 done_prefix = '*'
 
-#TODO: handle non-existant file?
 #TODO: handle empty and malformed lines in the file?
-
+#TODO: handle non-existant file?
 with open(note_file_path, 'r') as note_file:
     todos = [line for line in note_file.readlines() if line.startswith(todo_prefix)]
 
@@ -29,7 +28,7 @@ elif len(sys.argv) == 2 and sys.argv[1].isdigit():
     digit = int(sys.argv[1])
     with closing(fileinput.FileInput(note_file_path, inplace=True)) as note_file:
         for line in note_file:
-            if todos[digit:digit+1] == line:
+            if line in todos[digit:digit+1]:
                 print re.sub(r'^' + todo_prefix, done_prefix, line),
             else:
                 print line,
