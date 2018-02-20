@@ -9,6 +9,7 @@ sbt/*credentials
 sbt/**/templates
 sbt/**/zinc
 sbt/preloaded
+sbt/repositories*
 target/
 project/
 
