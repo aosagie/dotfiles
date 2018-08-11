@@ -1,0 +1,3 @@
+export JAVA_HOME="/usr/lib/jvm/java"
+export EDITOR="/usr/bin/vimx"
+export PYTHONPATH=/usr/lib/python2.7/site-packages/

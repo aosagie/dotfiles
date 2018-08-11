@@ -1,5 +1,5 @@
 # Configure Zplug
-export ZPLUG_HOME=/usr/local/opt/zplug
+export ZPLUG_HOME=~/.zplug
 source $ZPLUG_HOME/init.zsh
 
 zplug "themes/bureau", as:theme, from:oh-my-zsh
@@ -9,7 +9,7 @@ zplug "themes/bureau", as:theme, from:oh-my-zsh
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-history-substring-search"
-zplug "thewtex/tmux-mem-cpu-load"
+# zplug "zsh-users/zsh-autosuggestions"
 
 if ! zplug check; then
     zplug install
@@ -62,18 +62,11 @@ zstyle ':completion:*' insert-tab pending
 
 # Aliases
 # commands prefixed with an empty space are not stored in history
-case "$OSTYPE" in
-  linux*)  alias ls=' ls -F --color=auto --group-directories-first' ;;
-  darwin*) alias ls=' gls -F --color=auto --group-directories-first' ;;
-  # darwin*) alias ls=' ls -F -G' ;;
-  *)       echo "unknown OSTYPE: $OSTYPE" ;;
-esac
 alias ll=' ls -lah'
 alias rm='rm -i'
 alias mv='mv -i'
 alias cp='cp -i'
-alias grep='grep --color=auto'
-alias note=' note' #Commands preceeded by a space aren't stored in history
+alias vim='vimx'
 
 # Automatically run 'ls' upon entering a new directory
 function chpwd() {
@@ -135,6 +128,10 @@ bindkey "^[[B" down-line-or-search #down
 # fixes inability to ctrl-s horizontal splits in terminal vim's CtrlP
 stty -ixon -ixoff
 
-[ -f ~/.zshrc.local ] && source ~/.zshrc.local
+case "$OSTYPE" in
+  linux*) [ -f ~/.zshrc.linux.local ] && source ~/.zshrc.linux.local ;;
+  darwin*) [ -f ~/.zshrc.osx.local ] && source ~/.zshrc.osx.local ;;
+  *) echo "unknown OSTYPE: $OSTYPE" ;;
+esac
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+tb

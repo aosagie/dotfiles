@@ -1,0 +1,3 @@
+export JAVA_HOME=$(/usr/libexec/java_home)
+export EDITOR="/usr/local/bin/vim"
+# export PYTHONPATH=/usr/local/lib/python2.7/site-packages

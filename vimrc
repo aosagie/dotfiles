@@ -13,7 +13,7 @@ Plug 'mhinz/vim-grepper'
 Plug 'benjifisher/matchit.zip'
 Plug 'Shougo/neocomplete'
 Plug 'davidhalter/jedi-vim'
-Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
+" Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 Plug 'majutsushi/tagbar'
 Plug 'groenewege/vim-less'
 Plug 'ap/vim-css-color'
