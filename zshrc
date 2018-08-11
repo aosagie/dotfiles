@@ -61,7 +61,21 @@ autoload -Uz promptinit && promptinit
 zstyle ':completion:*' insert-tab pending
 
 # Aliases
-alias ll=' ls -lah' # commands prefixed with an empty space are not stored in history
+# commands prefixed with an empty space are not stored in history
+case "$OSTYPE" in
+  linux*)
+    alias ls=' ls -F --color=auto --group-directories-first'
+    alias vim='vimx' #vim-x11 is used in order to integrate with the clipboard
+    ;;
+  darwin*)
+    alias ls=' gls -F --color=auto --group-directories-first'
+    alias cut='gcut'
+    ;;
+  *)
+    echo "unknown OSTYPE: $OSTYPE"
+    ;;
+esac
+alias ll=' ls -lah'
 alias rm='rm -i'
 alias mv='mv -i'
 alias cp='cp -i'
@@ -119,7 +133,7 @@ bindkey -M vicmd 'q' push-line #store current line then restore it after you ent
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
 bindkey "\e[Z" reverse-menu-complete #shift+tab
-bindkey "^R" history-incremental-search-backward #ctrl+r
+# bindkey "^R" history-incremental-search-backward #ctrl+r
 bindkey "^[[A" up-line-or-search #up
 bindkey "^[[B" down-line-or-search #down
 
@@ -127,10 +141,6 @@ bindkey "^[[B" down-line-or-search #down
 # fixes inability to ctrl-s horizontal splits in terminal vim's CtrlP
 stty -ixon -ixoff
 
-case "$OSTYPE" in
-  linux*) [ -f ~/.zshrc.linux.local ] && source ~/.zshrc.linux.local ;;
-  darwin*) [ -f ~/.zshrc.osx.local ] && source ~/.zshrc.osx.local ;;
-  *) echo "unknown OSTYPE: $OSTYPE" ;;
-esac
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
 tb

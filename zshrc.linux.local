@@ -1,2 +1,0 @@
-alias ls=' ls -F --color=auto --group-directories-first'
-alias vim='vimx' #vim-x11 is used in order to integrate with the clipboard
