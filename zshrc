@@ -61,12 +61,11 @@ autoload -Uz promptinit && promptinit
 zstyle ':completion:*' insert-tab pending
 
 # Aliases
-# commands prefixed with an empty space are not stored in history
-alias ll=' ls -lah'
+alias ll=' ls -lah' # commands prefixed with an empty space are not stored in history
 alias rm='rm -i'
 alias mv='mv -i'
 alias cp='cp -i'
-alias vim='vimx'
+alias rg='rg --smart-case'
 
 # Automatically run 'ls' upon entering a new directory
 function chpwd() {
