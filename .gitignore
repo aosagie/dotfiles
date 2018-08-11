@@ -13,4 +13,4 @@ sbt/repositories*
 target/
 project/
 
-viridity.sbt
+idea.sbt
