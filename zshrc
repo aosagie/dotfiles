@@ -9,6 +9,7 @@ zplug "themes/bureau", as:theme, from:oh-my-zsh
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-history-substring-search"
+zplug "thewtex/tmux-mem-cpu-load"
 # zplug "zsh-users/zsh-autosuggestions"
 
 if ! zplug check; then
