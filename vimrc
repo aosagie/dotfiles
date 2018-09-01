@@ -9,10 +9,8 @@ Plug 'tpope/vim-commentary'
 Plug 'w0rp/ale'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
-Plug 'mhinz/vim-grepper'
 Plug 'benjifisher/matchit.zip'
-Plug 'Shougo/neocomplete'
-Plug 'davidhalter/jedi-vim'
+" Plug 'davidhalter/jedi-vim'
 " Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 Plug 'majutsushi/tagbar'
 Plug 'groenewege/vim-less'
@@ -23,6 +21,11 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'derekwyatt/vim-scala'
 Plug 'pearofducks/ansible-vim'
 Plug 'rust-lang/rust.vim'
+" Deoplete
+Plug 'Shougo/deoplete.nvim'
+Plug 'roxma/nvim-yarp'
+Plug 'roxma/vim-hug-neovim-rpc'
+let g:deoplete#enable_at_startup = 1
 call plug#end()
 
 set nocompatible
