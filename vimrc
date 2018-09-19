@@ -1,4 +1,5 @@
 call plug#begin()
+Plug 'sheerun/vim-polyglot'
 Plug 'vim-airline/vim-airline'
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-surround'
@@ -13,14 +14,10 @@ Plug 'benjifisher/matchit.zip'
 " Plug 'davidhalter/jedi-vim'
 " Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 Plug 'majutsushi/tagbar'
-Plug 'groenewege/vim-less'
 Plug 'ap/vim-css-color'
 Plug 'thinca/vim-fontzoom'
 Plug 'benmills/vimux'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'derekwyatt/vim-scala'
-Plug 'pearofducks/ansible-vim'
-Plug 'rust-lang/rust.vim'
 " Deoplete
 Plug 'Shougo/deoplete.nvim'
 Plug 'roxma/nvim-yarp'
