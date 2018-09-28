@@ -138,9 +138,12 @@ bindkey "\e[Z" reverse-menu-complete #shift+tab
 bindkey "^[[A" up-line-or-search #up
 bindkey "^[[B" down-line-or-search #down
 
-# turns off terminal driver flow control
-# fixes inability to ctrl-s horizontal splits in terminal vim's CtrlP
+# Turn off terminal driver flow control
+# Fixes inability to ctrl-s horizontal splits in terminal vim's CtrlP
 stty -ixon -ixoff
+
+# Prevent zsh from swallowing space before pipe character i.e. |
+ZLE_REMOVE_SUFFIX_CHARS=$' \t\n;&'
 
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
