@@ -11,6 +11,7 @@ zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-history-substring-search"
 zplug "thewtex/tmux-mem-cpu-load"
 # zplug "zsh-users/zsh-autosuggestions"
+zplug "plugins/gradle", from:oh-my-zsh # Override broken: /usr/share/zsh/5.5.1/functions/_gradle
 
 if ! zplug check; then
     zplug install
