@@ -148,4 +148,4 @@ ZLE_REMOVE_SUFFIX_CHARS=$' \t\n;&'
 
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
-tb
+# tb

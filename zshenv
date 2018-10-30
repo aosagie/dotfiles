@@ -4,9 +4,9 @@ export FZF_DEFAULT_COMMAND="rg --files"
 
 case "$OSTYPE" in
   linux*)
-      export JAVA_HOME="/usr/lib/jvm/java"
+      export JAVA_HOME="/etc/alternatives/jre"
       export EDITOR="/usr/bin/vimx"
-      export PYTHONPATH=/usr/lib/python2.7/site-packages/
+      # export PYTHONPATH=/usr/lib/python2.7/site-packages/
       ;;
   darwin*)
       export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
