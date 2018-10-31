@@ -4,7 +4,7 @@ export FZF_DEFAULT_COMMAND="rg --files"
 
 case "$OSTYPE" in
   linux*)
-      export JAVA_HOME="/etc/alternatives/jre"
+      export JAVA_HOME="/usr/lib/jvm/java"
       export EDITOR="/usr/bin/vimx"
       # export PYTHONPATH=/usr/lib/python2.7/site-packages/
       ;;
@@ -19,6 +19,6 @@ case "$OSTYPE" in
 esac
 
 typeset -U path # enforce unique paths
-path=($HOME/bin $HOME/.cargo/bin /usr/local/sbin $path)
+path=($HOME/bin $HOME/.local/bin $HOME/.cargo/bin /usr/local/sbin $path)
 
 [ -f ~/.zshenv.local ] && source ~/.zshenv.local
