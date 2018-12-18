@@ -68,6 +68,7 @@ case "$OSTYPE" in
   linux*)
     alias ls=' ls -F --color=auto --group-directories-first'
     alias vim='vimx' #vim-x11 is used in order to integrate with the clipboard
+    alias open='xdg-open'
     ;;
   darwin*)
     alias ls=' gls -F --color=auto --group-directories-first'
