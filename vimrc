@@ -1,5 +1,6 @@
 call plug#begin()
 Plug 'sheerun/vim-polyglot'
+Plug 'GEverding/vim-hocon'
 Plug 'vim-airline/vim-airline'
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-surround'

@@ -1,3 +1,4 @@
+# zmodload zsh/zprof #PROFILING
 # Configure Zplug
 export ZPLUG_HOME=~/.zplug
 source $ZPLUG_HOME/init.zsh
@@ -150,3 +151,4 @@ ZLE_REMOVE_SUFFIX_CHARS=$' \t\n;&'
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
 # tb
+# zmodload zsh/zprof #PROFILING
