@@ -12,9 +12,7 @@ Plug 'w0rp/ale'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'benjifisher/matchit.zip'
-" Plug 'davidhalter/jedi-vim'
-" Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
-Plug 'majutsushi/tagbar'
+" Plug 'majutsushi/tagbar'
 Plug 'ap/vim-css-color'
 Plug 'thinca/vim-fontzoom'
 Plug 'benmills/vimux'
@@ -172,9 +170,6 @@ let g:fzf_action = {
     \ }
 nnoremap <C-P> :Files!<CR>
 
-let g:jedi#completions_enabled = 1
-let g:neocomplete#enable_at_startup = 1
-
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 
@@ -189,9 +184,8 @@ vmap <silent> <leader>v "vy :call VimuxSlime()<CR>
 
 " <TAB>: completion.
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
 " }}}
-
-autocmd BufRead,BufNewFile *.json set filetype=json
 
 " show special characters when not in insert mode
 autocmd VimEnter * set list
