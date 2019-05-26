@@ -73,6 +73,7 @@ case "$OSTYPE" in
     ;;
   darwin*)
     alias ls=' gls -F --color=auto --group-directories-first'
+    alias zcat='gzcat'
     alias cut='gcut'
     ;;
   *)
