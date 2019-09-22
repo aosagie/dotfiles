@@ -1,6 +1,7 @@
 vim/.VimballRecord
 vim/.netrwhist
 vim/plugged
+vim/autoload/plug.vim.old
 
 sbt/launchers
 sbt/**/boot
@@ -10,6 +11,8 @@ sbt/**/templates
 sbt/**/zinc
 sbt/preloaded
 sbt/repositories*
+sbt/1.0/swoval-jni
+sbt/1.0/plugins/metals.sbt
 target/
 project/
 
