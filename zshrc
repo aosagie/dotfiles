@@ -12,7 +12,7 @@ zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-history-substring-search"
 zplug "thewtex/tmux-mem-cpu-load"
 # zplug "zsh-users/zsh-autosuggestions"
-zplug "plugins/gradle", from:oh-my-zsh # Override broken: /usr/share/zsh/5.5.1/functions/_gradle
+# zplug "plugins/gradle", from:oh-my-zsh # Override broken: /usr/share/zsh/5.5.1/functions/_gradle
 
 if ! zplug check; then
     zplug install
@@ -21,12 +21,12 @@ fi
 zplug load #--verbose
 
 export PROMPT="❯ "
+# export PROMPT="▶ "
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.zsh_history
 HISTSIZE=100000
 SAVEHIST=100000
-setopt appendhistory autocd notify
 unsetopt beep
 bindkey -v
 # End of lines configured by zsh-newuser-install
@@ -45,7 +45,8 @@ zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}' '+r:|[._-/]=*
 zstyle ':completion:*' menu select=1
 zstyle ':completion:*' original true
 zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
-zstyle :compinstall filename '/home/aosagie/.zshrc'
+# zstyle :compinstall filename '/home/aosagie/.zshrc'
+zstyle :compinstall filename '/Users/hxv143/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -128,6 +129,8 @@ setopt interactivecomments
 
 # Multi-terminal history
 setopt histignorealldups sharehistory
+
+setopt appendhistory
 
 # Make backspace work normally in vi mode
 zle -A .backward-delete-char vi-backward-delete-char
