@@ -125,6 +125,7 @@ vnore j gj
 vnore k gk
 nnoremap Y y$
 map <TAB> %
+map Q <Nop>
 
 " sudo to write
 cmap w!! w !sudo tee % >/dev/null<CR>:e!<CR><CR>
