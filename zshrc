@@ -20,8 +20,7 @@ fi
 
 zplug load #--verbose
 
-export PROMPT="❯ "
-# export PROMPT="▶ "
+# export PROMPT="❯ "
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.zsh_history
