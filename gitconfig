@@ -5,6 +5,7 @@
 	helper = cache --timeout=3600
 [merge]
 	tool = code
+	conflictstyle = diff3
 [mergetool "kdiff3"]
 	trustExitCode = false
 	keepBackup = false
