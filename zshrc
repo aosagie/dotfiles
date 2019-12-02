@@ -22,6 +22,7 @@ fi
 zplug load #--verbose
 
 # export PROMPT="❯ "
+export RPROMPT='$(bureau_git_prompt)'
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.zsh_history
@@ -53,6 +54,9 @@ compinit
 
 # Better kill command completion
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,cmd'
+
+# These commands haven't been added to zsh's more advanced git completion yet
+zstyle ':completion:*:*:git:*' user-commands switch:'switch branches' restore:'restore working tree files'
 
 # Allow access to named colors
 autoload -U colors && colors
@@ -115,7 +119,6 @@ setopt NOTIFY
 # Inform of running jobs when trying to exit
 setopt CHECK_JOBS
 
-# Self explanatory
 setopt HIST_REDUCE_BLANKS
 
 setopt HIST_IGNORE_SPACE
@@ -153,9 +156,7 @@ ZLE_REMOVE_SUFFIX_CHARS=$' \t\n;&'
 
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
-# tb
 # zmodload zsh/zprof #PROFILING
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" --no-use  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
