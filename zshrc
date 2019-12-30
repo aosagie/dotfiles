@@ -22,7 +22,7 @@ fi
 zplug load #--verbose
 
 # export PROMPT="❯ "
-export RPROMPT='$(bureau_git_prompt)'
+# export RPROMPT='$(bureau_git_prompt)'
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.zsh_history
@@ -159,4 +159,4 @@ ZLE_REMOVE_SUFFIX_CHARS=$' \t\n;&'
 # zmodload zsh/zprof #PROFILING
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" --no-use  # This loads nvm
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" #--no-use  # This loads nvm

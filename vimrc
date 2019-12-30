@@ -1,4 +1,5 @@
 call plug#begin()
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sheerun/vim-polyglot'
 Plug 'GEverding/vim-hocon'
 Plug 'vim-airline/vim-airline'
@@ -17,11 +18,6 @@ Plug 'ap/vim-css-color'
 Plug 'thinca/vim-fontzoom'
 Plug 'benmills/vimux'
 Plug 'christoomey/vim-tmux-navigator'
-" Deoplete
-Plug 'Shougo/deoplete.nvim'
-Plug 'roxma/nvim-yarp'
-Plug 'roxma/vim-hug-neovim-rpc'
-let g:deoplete#enable_at_startup = 1
 call plug#end()
 
 set nocompatible
