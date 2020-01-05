@@ -12,6 +12,7 @@ zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-history-substring-search"
 zplug "thewtex/tmux-mem-cpu-load"
 zplug "ael-code/zsh-colored-man-pages"
+zplug "lukechilds/zsh-nvm"
 # zplug "zsh-users/zsh-autosuggestions"
 # zplug "plugins/gradle", from:oh-my-zsh # Override broken: /usr/share/zsh/5.5.1/functions/_gradle
 
@@ -22,7 +23,7 @@ fi
 zplug load #--verbose
 
 # export PROMPT="❯ "
-# export RPROMPT='$(bureau_git_prompt)'
+export RPROMPT='$(bureau_git_prompt)' #I removed the nvm info because I don't use it much
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.zsh_history
@@ -156,7 +157,4 @@ ZLE_REMOVE_SUFFIX_CHARS=$' \t\n;&'
 
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
-# zmodload zsh/zprof #PROFILING
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" #--no-use  # This loads nvm
+# zprof #PROFILING
