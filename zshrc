@@ -97,43 +97,20 @@ function chpwd() {
     ls
 }
 
-# Automatically list choices on an ambiguous completion
-setopt AUTO_LIST
-
-# In conjunction with AUTO_LIST, only lists when completion is ambiguous
-setopt LIST_AMBIGUOUS
-
-# Make completion list smaller
-setopt LIST_PACKED
-
-# Allow moving through directories just by entering their names
-setopt AUTO_CD
-
-# Keep stack-based history of traversed directories that can be accessed w/ 'popd'
-setopt AUTO_PUSHD
-
+setopt AUTO_LIST # Automatically list choices on an ambiguous completion
+setopt LIST_AMBIGUOUS # In conjunction with AUTO_LIST, only lists when completion is ambiguous
+setopt LIST_PACKED # Make completion list smaller
+setopt AUTO_CD # Allow moving through directories just by entering their names
+setopt AUTO_PUSHD # Keep stack-based history of traversed directories that can be accessed w/ 'popd'
 setopt PUSHD_IGNORE_DUPS
-
-# Report status of background jobs immediately, not on next prompt
-setopt NOTIFY
-
-# Inform of running jobs when trying to exit
-setopt CHECK_JOBS
-
+setopt NOTIFY # Report status of background jobs immediately, not on next prompt
+setopt CHECK_JOBS # Inform of running jobs when trying to exit
 setopt HIST_REDUCE_BLANKS
-
 setopt HIST_IGNORE_SPACE
-
-# Command substitution in the prompt
-setopt PROMPT_SUBST
-
-# Allow comments in the command line
-setopt interactivecomments
-
-# Multi-terminal history
-setopt histignorealldups sharehistory
-
-setopt appendhistory
+setopt PROMPT_SUBST # Command substitution in the prompt
+setopt INTERACTIVECOMMENTS # Allow comments in the command line
+setopt HISTIGNOREALLDUPS SHAREHISTORY # Multi-terminal history
+setopt APPENDHISTORY
 
 # Make backspace work normally in vi mode
 zle -A .backward-delete-char vi-backward-delete-char
