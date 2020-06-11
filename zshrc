@@ -80,6 +80,7 @@ case "$OSTYPE" in
     alias ls=' gls -F --color=auto --group-directories-first'
     alias zcat='gzcat'
     alias cut='gcut'
+    alias trash='trash -F'
     ;;
   *)
     echo "unknown OSTYPE: $OSTYPE"
