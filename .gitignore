@@ -1,7 +1,7 @@
 vim/.VimballRecord
 vim/.netrwhist
 vim/plugged
-vim/autoload/plug.vim.old
+vim/autoload
 
 sbt/launchers
 sbt/**/boot
