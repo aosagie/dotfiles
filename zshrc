@@ -22,7 +22,9 @@ fi
 
 zplug load #--verbose
 
-# export PROMPT="❯ "
+if [[ -v SSH_TTY ]]; then
+  export PROMPT="❯❯ "
+fi
 export RPROMPT='$(bureau_git_prompt)' #I removed the nvm info because I don't use it much
 
 # Lines configured by zsh-newuser-install
