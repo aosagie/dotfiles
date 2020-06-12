@@ -10,9 +10,8 @@ zplug "themes/bureau", as:theme, from:oh-my-zsh
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-history-substring-search"
-zplug "thewtex/tmux-mem-cpu-load"
 zplug "ael-code/zsh-colored-man-pages"
-zplug "lukechilds/zsh-nvm"
+# zplug "lukechilds/zsh-nvm"
 # zplug "zsh-users/zsh-autosuggestions"
 # zplug "plugins/gradle", from:oh-my-zsh # Override broken: /usr/share/zsh/5.5.1/functions/_gradle
 
@@ -75,7 +74,10 @@ zstyle ':completion:*' insert-tab pending
 case "$OSTYPE" in
   linux*)
     alias ls=' ls -F --color=auto --group-directories-first'
-    alias vim='vimx' #vim-x11 is used in order to integrate with the clipboard
+    if type "vimx" > /dev/null; then
+      alias vim='vimx' #vim-x11 is used in order to integrate with the clipboard
+    fi
+    alias vi='vim'
     alias open='xdg-open'
     ;;
   darwin*)
@@ -132,8 +134,9 @@ bindkey "^[[B" down-line-or-search #down
 # Fixes inability to ctrl-s horizontal splits in terminal vim's CtrlP
 stty -ixon -ixoff
 
-# Prevent zsh from swallowing space before pipe character i.e. |
-ZLE_REMOVE_SUFFIX_CHARS=$' \t\n;&'
+ZLE_REMOVE_SUFFIX_CHARS=$' \t\n;&' # Prevent zsh from swallowing space before pipe character i.e. |
+
+KEYTIMEOUT=20 # Give some time to enter two key vi commands - like 'jj'
 
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 

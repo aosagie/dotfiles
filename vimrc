@@ -1,5 +1,5 @@
 call plug#begin()
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sheerun/vim-polyglot'
 Plug 'GEverding/vim-hocon'
 Plug 'vim-airline/vim-airline'
@@ -199,7 +199,4 @@ set guioptions=er
 
 if has('gui_macvim')
     set guifont=Source\ Code\ Pro:h13
-else
-    set guifont=Roboto\ Mono\ for\ Powerline\ 12
-    " set guifont=Source\ Code\ Pro\ 13
 endif
