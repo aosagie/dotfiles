@@ -26,12 +26,14 @@ if [[ -v SSH_TTY ]]; then
 fi
 export RPROMPT='$(bureau_git_prompt)' #I removed the nvm info because I don't use it much
 
+fpath=(~/.zsh/completion $fpath)
+
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.zsh_history
 HISTSIZE=100000
 SAVEHIST=100000
 unsetopt beep
-bindkey -v
+bindkey -v #Vi mode
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 
@@ -50,8 +52,7 @@ zstyle ':completion:*' original true
 zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
 zstyle :compinstall filename '$HOME/.zshrc'
 
-autoload -Uz compinit
-compinit
+autoload -Uz compinit && compinit -i
 # End of lines added by compinstall
 
 # Better kill command completion
