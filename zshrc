@@ -31,7 +31,7 @@ fpath=(~/.zsh/completion $fpath)
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.zsh_history
 HISTSIZE=100000
-SAVEHIST=100000
+SAVEHIST=$HISTSIZE
 unsetopt beep
 bindkey -v #Vi mode
 # End of lines configured by zsh-newuser-install
@@ -111,12 +111,14 @@ setopt AUTO_PUSHD # Keep stack-based history of traversed directories that can b
 setopt PUSHD_IGNORE_DUPS
 setopt NOTIFY # Report status of background jobs immediately, not on next prompt
 setopt CHECK_JOBS # Inform of running jobs when trying to exit
+setopt PROMPT_SUBST # Command substitution in the prompt
+setopt INTERACTIVE_COMMENTS # Allow comments in the command line
 setopt HIST_REDUCE_BLANKS
 setopt HIST_IGNORE_SPACE
-setopt PROMPT_SUBST # Command substitution in the prompt
-setopt INTERACTIVECOMMENTS # Allow comments in the command line
-setopt HISTIGNOREALLDUPS SHAREHISTORY # Multi-terminal history
-setopt APPENDHISTORY
+setopt HIST_IGNORE_ALL_DUPS HIST_IGNORE_DUPS
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt SHARE_HISTORY # Multi-terminal history
+setopt APPEND_HISTORY
 
 # Make backspace work normally in vi mode
 zle -A .backward-delete-char vi-backward-delete-char
