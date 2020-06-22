@@ -17,3 +17,5 @@ target/
 project/
 
 idea.sbt
+
+zsh/completion/_rde
