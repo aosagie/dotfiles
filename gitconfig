@@ -6,6 +6,8 @@
 [merge]
 	tool = code
 	conflictstyle = diff3
+[mergetool "code"]
+	cmd = code --wait $MERGED
 [mergetool "kdiff3"]
 	trustExitCode = false
 	keepBackup = false
@@ -23,7 +25,3 @@
 	askpass =
 [include]
 	path = ~/.gitconfig.local
-; [diff "ansible-vault"]
-; 	textconv = PAGER=cat ansible-vault view
-[mergetool "code"]
-	cmd = code --wait $MERGED
