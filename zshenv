@@ -5,12 +5,16 @@ export FZF_DEFAULT_COMMAND="rg --files"
 case "$OSTYPE" in
   linux*)
       export JAVA_HOME="/usr/lib/jvm/java"
-      export EDITOR="/usr/bin/vimx"
+      if type "vimx" > /dev/null; then
+        export EDITOR=$(which vimx)
+      else
+        export EDITOR=$(which vim)
+      fi
       # export PYTHONPATH=/usr/lib/python2.7/site-packages/
       ;;
   darwin*)
       export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
-      export EDITOR="/usr/local/bin/vim"
+      export EDITOR=$(which vim)
       # export PYTHONPATH=/usr/local/lib/python2.7/site-packages
       ;;
   *)
