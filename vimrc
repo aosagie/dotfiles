@@ -5,7 +5,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin()
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sheerun/vim-polyglot'
 Plug 'GEverding/vim-hocon'
 Plug 'vim-airline/vim-airline'
@@ -19,7 +19,7 @@ Plug 'w0rp/ale'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'benjifisher/matchit.zip'
-" Plug 'majutsushi/tagbar'
+Plug 'majutsushi/tagbar'
 Plug 'ap/vim-css-color'
 Plug 'thinca/vim-fontzoom'
 Plug 'benmills/vimux'

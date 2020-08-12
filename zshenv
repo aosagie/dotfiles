@@ -1,12 +1,13 @@
 [[ -z $TMUX ]] && export TERM="xterm-256color" #If TMUX is on then let it handle the term colors
 
 export FZF_DEFAULT_COMMAND="rg --files"
+export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
 
 case "$OSTYPE" in
   linux*)
       export JAVA_HOME="/usr/lib/jvm/java"
       if type "vimx" > /dev/null; then
-        export EDITOR=$(which vimx)
+        export EDITOR=$(which vimx) #vimx is vim with xterm clipboard support
       else
         export EDITOR=$(which vim)
       fi
