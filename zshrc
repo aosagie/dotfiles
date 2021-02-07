@@ -3,10 +3,6 @@
 export ZPLUG_HOME=~/.zplug
 source $ZPLUG_HOME/init.zsh
 
-zplug "themes/bureau", as:theme, from:oh-my-zsh
-# zplug "frmendes/geometry"
-# zplug "halfo/lambda-mod-zsh-theme", as:theme
-# zplug "oskarkrawczyk/honukai-iterm-zsh", as:theme
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-history-substring-search"
@@ -14,6 +10,7 @@ zplug "ael-code/zsh-colored-man-pages"
 # zplug "lukechilds/zsh-nvm"
 # zplug "zsh-users/zsh-autosuggestions"
 # zplug "plugins/gradle", from:oh-my-zsh # Override broken: /usr/share/zsh/5.5.1/functions/_gradle
+zplug "denysdovhan/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
 
 if ! zplug check; then
     zplug install
@@ -21,10 +18,9 @@ fi
 
 zplug load #--verbose
 
-if [[ -v SSH_TTY ]]; then
-  export PROMPT="❯❯ "
-fi
-export RPROMPT='$(bureau_git_prompt)' #I removed the nvm info because I don't use it much
+SPACESHIP_DIR_TRUNC=0
+SPACESHIP_PROMPT_ORDER_EXCLUDE=(vi_mode)
+SPACESHIP_PROMPT_ORDER=(${SPACESHIP_PROMPT_ORDER:|SPACESHIP_PROMPT_ORDER_EXCLUDE})
 
 fpath=(~/.zsh/completion $fpath)
 
