@@ -10,17 +10,12 @@ zplug "ael-code/zsh-colored-man-pages"
 # zplug "lukechilds/zsh-nvm"
 # zplug "zsh-users/zsh-autosuggestions"
 # zplug "plugins/gradle", from:oh-my-zsh # Override broken: /usr/share/zsh/5.5.1/functions/_gradle
-zplug "denysdovhan/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
 
 if ! zplug check; then
     zplug install
 fi
 
 zplug load #--verbose
-
-SPACESHIP_DIR_TRUNC=0
-SPACESHIP_PROMPT_ORDER_EXCLUDE=(vi_mode)
-SPACESHIP_PROMPT_ORDER=(${SPACESHIP_PROMPT_ORDER:|SPACESHIP_PROMPT_ORDER_EXCLUDE})
 
 fpath=(~/.zsh/completion $fpath)
 
@@ -138,5 +133,7 @@ ZLE_REMOVE_SUFFIX_CHARS=$' \t\n;&' # Prevent zsh from swallowing space before pi
 KEYTIMEOUT=20 # Give some time to enter two key vi commands - like 'jj'
 
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
+
+eval "$(starship init zsh)"
 
 # zprof #PROFILING
