@@ -23,6 +23,7 @@
 	default = simple
 [core]
 	askpass =
+	autocrlf = input
 [pull]
 	ff = only
 [include]

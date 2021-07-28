@@ -6,7 +6,7 @@ endif
 
 call plug#begin()
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'sheerun/vim-polyglot'
+" Plug 'sheerun/vim-polyglot'
 Plug 'GEverding/vim-hocon'
 Plug 'vim-airline/vim-airline'
 Plug 'easymotion/vim-easymotion'

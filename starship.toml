@@ -4,3 +4,18 @@ disabled = true
 [directory]
 truncation_length = 0
 truncate_to_repo = false
+
+[java]
+disabled = true
+
+[kotlin]
+disabled = true
+
+[golang]
+disabled = true
+
+[python]
+disabled = true
+
+[ruby]
+disabled = true
