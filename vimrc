@@ -6,7 +6,7 @@ endif
 
 call plug#begin()
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" Plug 'sheerun/vim-polyglot'
+Plug 'sheerun/vim-polyglot'
 Plug 'GEverding/vim-hocon'
 Plug 'vim-airline/vim-airline'
 Plug 'easymotion/vim-easymotion'
@@ -31,6 +31,8 @@ set t_Co=256
 
 filetype plugin indent on
 syntax enable
+" Use newer regex engine so that languages like TypeScript don't slow down Vim
+set regexpengine=0
 
 scriptencoding utf-8
 set encoding=utf-8
