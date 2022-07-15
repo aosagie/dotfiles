@@ -187,6 +187,14 @@ endfunction
 " If text is selected, save it in the v buffer and send that buffer it to tmux
 vmap <silent> <leader>v "vy :call VimuxSlime()<CR>
 
+" Activate bracketed paste in tmux (ensures auto indenting isn't done on pasting)
+if &term =~ "screen"
+  let &t_BE = "\e[?2004h"
+  let &t_BD = "\e[?2004l"
+  exec "set t_PS=\e[200~"
+  exec "set t_PE=\e[201~"
+endif
+
 " <TAB>: completion.
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"

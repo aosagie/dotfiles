@@ -4,9 +4,11 @@ export ZPLUG_HOME=~/.zplug
 source $ZPLUG_HOME/init.zsh
 
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
+# zplug "zdharma-continuum/fast-syntax-highlighting" #This doesn't work that well
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-history-substring-search"
 zplug "ael-code/zsh-colored-man-pages"
+# zplug "jeffreytse/zsh-vi-mode" #https://github.com/jeffreytse/zsh-vi-mode/issues/124
 # zplug "lukechilds/zsh-nvm"
 # zplug "zsh-users/zsh-autosuggestions"
 # zplug "plugins/gradle", from:oh-my-zsh # Override broken: /usr/share/zsh/5.5.1/functions/_gradle

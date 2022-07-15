@@ -14,7 +14,7 @@ case "$OSTYPE" in
       # export PYTHONPATH=/usr/lib/python2.7/site-packages/
       ;;
   darwin*)
-      export JAVA_HOME=$(/usr/libexec/java_home -v 11)
+      export JAVA_HOME=$(/usr/libexec/java_home -v 17)
       export EDITOR=$(which vim)
       # export PYTHONPATH=/usr/local/lib/python2.7/site-packages
       ;;
