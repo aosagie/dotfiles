@@ -12,6 +12,7 @@ zplug "ael-code/zsh-colored-man-pages"
 # zplug "lukechilds/zsh-nvm"
 # zplug "zsh-users/zsh-autosuggestions"
 # zplug "plugins/gradle", from:oh-my-zsh # Override broken: /usr/share/zsh/5.5.1/functions/_gradle
+zplug "marlonrichert/zsh-hist"
 
 if ! zplug check; then
     zplug install
