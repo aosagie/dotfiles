@@ -24,8 +24,8 @@ fpath=(~/.zsh/completion $fpath)
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.zsh_history
-HISTSIZE=100000
-SAVEHIST=$HISTSIZE
+SAVEHIST=100000
+HISTSIZE=$(($SAVEHIST*1.2)) #Required by zsh-hist: https://github.com/marlonrichert/zsh-hist/blob/670bebd942754ab8c4e9312a6e7027ef17751e6b/functions/hist#L31
 unsetopt beep
 bindkey -v #Vi mode
 # End of lines configured by zsh-newuser-install
