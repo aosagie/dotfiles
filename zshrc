@@ -3,10 +3,10 @@
 export ZPLUG_HOME=~/.zplug
 source $ZPLUG_HOME/init.zsh
 
-zplug "zsh-users/zsh-syntax-highlighting", defer:2
+zplug "zsh-users/zsh-syntax-highlighting", defer:2 #https://github.com/zsh-users/zsh-syntax-highlighting#why-must-zsh-syntax-highlightingzsh-be-sourced-at-the-end-of-the-zshrc-file
 # zplug "zdharma-continuum/fast-syntax-highlighting" #This doesn't work that well
 zplug "zsh-users/zsh-completions"
-zplug "zsh-users/zsh-history-substring-search"
+zplug "zsh-users/zsh-history-substring-search", defer:3 #https://github.com/zsh-users/zsh-history-substring-search#user-content-usage
 zplug "ael-code/zsh-colored-man-pages"
 # zplug "jeffreytse/zsh-vi-mode" #https://github.com/jeffreytse/zsh-vi-mode/issues/124
 # zplug "lukechilds/zsh-nvm"

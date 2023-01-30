@@ -15,7 +15,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'benjifisher/matchit.zip'
@@ -24,6 +24,7 @@ Plug 'ap/vim-css-color'
 Plug 'thinca/vim-fontzoom'
 Plug 'benmills/vimux'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'markonm/traces.vim'
 call plug#end()
 
 set nocompatible
@@ -53,7 +54,8 @@ set autoindent smartindent
 set history=100
 set undolevels=100
 
-set listchars=eol:↲,trail:·,tab:▸\ ,precedes:«,extends:»
+" set listchars=eol:↲,trail:·,tab:▸\ ,precedes:«,extends:»
+set listchars=trail:·,tab:▸\ ,precedes:«,extends:»
 
 "set showbreak=↪
 
