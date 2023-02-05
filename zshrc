@@ -74,6 +74,7 @@ case "$OSTYPE" in
     fi
     alias vi='vim'
     alias open='xdg-open'
+    alias trash='trash-put'
     ;;
   darwin*)
     alias ls=' gls -F --color=auto --group-directories-first'
