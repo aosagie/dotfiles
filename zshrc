@@ -8,11 +8,12 @@ zplug "zsh-users/zsh-syntax-highlighting", defer:2 #https://github.com/zsh-users
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-history-substring-search", defer:3 #https://github.com/zsh-users/zsh-history-substring-search#user-content-usage
 zplug "ael-code/zsh-colored-man-pages"
-# zplug "jeffreytse/zsh-vi-mode" #https://github.com/jeffreytse/zsh-vi-mode/issues/124
+# zplug "jeffreytse/zsh-vi-mode" #Scrolling thru history is slow when this is on
 # zplug "lukechilds/zsh-nvm"
 # zplug "zsh-users/zsh-autosuggestions"
 # zplug "plugins/gradle", from:oh-my-zsh # Override broken: /usr/share/zsh/5.5.1/functions/_gradle
 zplug "marlonrichert/zsh-hist"
+zplug "kutsan/zsh-system-clipboard"
 
 if ! zplug check; then
     zplug install

@@ -2,6 +2,7 @@
 
 export FZF_DEFAULT_COMMAND="rg --files"
 export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
+export ZVM_VI_ESCAPE_BINDKEY="jj"
 
 case "$OSTYPE" in
   linux*)
