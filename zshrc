@@ -16,12 +16,15 @@ zplug "marlonrichert/zsh-hist"
 zplug "kutsan/zsh-system-clipboard"
 
 if ! zplug check; then
-    zplug install
+  zplug install
 fi
 
 zplug load #--verbose
 
 fpath=(~/.zsh/completion $fpath)
+if type brew &>/dev/null; then
+  fpath=($(brew --prefix)/share/zsh/site-functions ${fpath})
+fi
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.zsh_history
