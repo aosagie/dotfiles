@@ -17,15 +17,11 @@ case "$OSTYPE" in
   darwin*)
       export JAVA_HOME=$(/usr/libexec/java_home -v 17)
       export EDITOR=$(which vim)
-      path=(/usr/local/opt/python@3.10/libexec/bin $path)
       # export PYTHONPATH=/usr/local/lib/python2.7/site-packages
       ;;
   *)
       echo "unknown OSTYPE: $OSTYPE"
       ;;
 esac
-
-typeset -U path # enforce unique paths
-path=($HOME/bin $HOME/.local/bin $HOME/.cargo/bin /usr/local/sbin $path)
 
 [ -f ~/.zshenv.local ] && source ~/.zshenv.local

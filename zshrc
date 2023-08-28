@@ -26,6 +26,9 @@ if type brew &>/dev/null; then
   fpath=($(brew --prefix)/share/zsh/site-functions ${fpath})
 fi
 
+typeset -U path # enforce unique paths
+path=($HOME/bin $HOME/.local/bin $HOME/.cargo/bin /usr/local/sbin $path) #Online suggested updating PATH in zshrc instead of zshenv since many environments end up overwriting zshenv changes
+
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.zsh_history
 SAVEHIST=100000
