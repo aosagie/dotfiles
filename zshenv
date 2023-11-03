@@ -6,7 +6,7 @@ export ZVM_VI_ESCAPE_BINDKEY="jj"
 
 case "$OSTYPE" in
   linux*)
-      export JAVA_HOME="/usr/lib/jvm/java"
+      export JAVA_HOME="/etc/alternatives/jre"
       if type "vimx" > /dev/null; then
         export EDITOR=$(which vimx) #vimx is vim with xterm clipboard support
       else
