@@ -84,7 +84,7 @@ set softtabstop=2
 set tabstop=2
 
 " full mouse support
-set mouse=a
+" set mouse=a #This was causing clicking on vim to insert random characters
 
 " enhanced normal mode tab completion
 set wildmenu

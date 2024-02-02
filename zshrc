@@ -14,6 +14,7 @@ zplug "ael-code/zsh-colored-man-pages"
 # zplug "plugins/gradle", from:oh-my-zsh # Override broken: /usr/share/zsh/5.5.1/functions/_gradle
 zplug "marlonrichert/zsh-hist"
 zplug "kutsan/zsh-system-clipboard"
+zplug "Aloxaf/fzf-tab"
 
 if ! zplug check; then
   zplug install
