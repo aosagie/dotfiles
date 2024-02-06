@@ -60,8 +60,8 @@ autoload -Uz compinit && compinit -i
 # Better kill command completion
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,cmd'
 
-# These commands haven't been added to zsh's more advanced git completion yet
-zstyle ':completion:*:*:git:*' user-commands switch:'switch branches' restore:'restore working tree files'
+# Use fzf-tab with tmux's popup functionality
+zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
 
 # Allow access to named colors
 autoload -U colors && colors
