@@ -62,6 +62,7 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,cmd'
 
 # Use fzf-tab with tmux's popup functionality
 zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
+zstyle ':fzf-tab:*' fzf-flags '-i' # make fzf case insensitive
 
 # Allow access to named colors
 autoload -U colors && colors
