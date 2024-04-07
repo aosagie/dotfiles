@@ -33,5 +33,7 @@
 	autocrlf = input
 [pull]
 	ff = only
+[diff]
+	wsErrorHighlight = all
 [include]
 	path = ~/.gitconfig.local
