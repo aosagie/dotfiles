@@ -21,7 +21,6 @@
 	ll = log --stat --abbrev-commit
 	lg = log --color --graph --pretty=format:'%C(bold white)%h%Creset %C(auto)%d%Creset %s %C(bold green)(%cr)%Creset %C(bold blue)<%an>%Creset'
 	search = "!f(){ git log -p -G\"$1\"; }; f"
-	; recent = for-each-ref --count=10 --sort=-committerdate refs/heads/ --format="%(refname:short)"
 	recent = branch --verbose --sort=-committerdate
 	hide = update-index --skip-worktree
 	unhide = update-index --no-skip-worktree

@@ -1,9 +1,20 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
 [package]
 disabled = true
 
 [directory]
 truncation_length = 0
 truncate_to_repo = false
+
+[custom.git-hidden]
+# disabled = true
+require_repo = true
+when = '''[[ $(git hidden) ]]''' # When there are hidden files in the repo
+# format = '''[\[hidden\]]($style) '''
+# style = 'red bold'
+format = '''$symbol '''
+symbol = '🔎'
 
 [java]
 disabled = true
