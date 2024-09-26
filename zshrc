@@ -100,6 +100,8 @@ alias rm='rm -i'
 alias mv='mv -i'
 alias cp='cp -i'
 alias rg='rg --smart-case'
+#TODO: figure out why git alias can't find 'ftb-tmux-popup' command, forcing me to use it in a shell alias
+alias fixup='git log origin/mainline..HEAD --oneline | ftb-tmux-popup | cut -d" " -f1 | xargs -n1 git commit --fixup'
 
 # Automatically run 'ls' upon entering a new directory
 function chpwd() {
