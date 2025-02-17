@@ -63,6 +63,9 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,cmd'
 # Use fzf-tab with tmux's popup functionality
 zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
 zstyle ':fzf-tab:*' fzf-flags '-i' # make fzf case insensitive
+# force zsh not to show completion menu, which allows fzf-tab to capture the unambiguous prefix
+zstyle ':completion:*' menu no
+
 
 # Allow access to named colors
 autoload -U colors && colors
@@ -100,8 +103,6 @@ alias rm='rm -i'
 alias mv='mv -i'
 alias cp='cp -i'
 alias rg='rg --smart-case'
-#TODO: figure out why git alias can't find 'ftb-tmux-popup' command, forcing me to use it in a shell alias
-alias fixup='git log origin/mainline..HEAD --oneline | ftb-tmux-popup | cut -d" " -f1 | xargs -n1 git commit --fixup'
 
 # Automatically run 'ls' upon entering a new directory
 function chpwd() {

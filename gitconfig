@@ -26,6 +26,7 @@
 	unhide = update-index --no-skip-worktree
 	hidden = "! git ls-files -v | grep '^S' | cut -c3-"
 	show-hidden = "! git show HEAD:\"$1\" | git diff --no-index - \"$1\" #"
+	fixup = "! git log origin/mainline..HEAD --oneline | fzf-tmux -p | cut -d' ' -f1 | xargs -n1 git commit --fixup"
 [push]
 	default = simple
 [core]
