@@ -16,7 +16,7 @@ Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 " Plug 'dense-analysis/ale' # Keeps showing errors in Java files I want to quickly edit. Lets try just coc.vcim for now
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'benjifisher/matchit.zip'
 Plug 'majutsushi/tagbar'

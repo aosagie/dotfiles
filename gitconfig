@@ -20,13 +20,13 @@
 [alias]
 	ll = log --stat --abbrev-commit
 	lg = log --color --graph --pretty=format:'%C(bold white)%h%Creset %C(auto)%d%Creset %s %C(bold green)(%cr)%Creset %C(bold blue)<%an>%Creset'
-	search = "! git log -p -G\"$1\" #"
+	search = "! git log -p -G\"$1\" --all #"
 	recent = branch --verbose --sort=-committerdate
-	hide = update-index --skip-worktree
-	unhide = update-index --no-skip-worktree
-	hidden = "! git ls-files -v | grep '^S' | cut -c3-"
-	show-hidden = "! git show HEAD:\"$1\" | git diff --no-index - \"$1\" #"
-	fixup = "! git log origin/mainline..HEAD --oneline | fzf-tmux -p | cut -d' ' -f1 | xargs -n1 git commit --fixup"
+	fixup = "! git log origin/mainline..HEAD --oneline | fzf --tmux | cut -d' ' -f1 | xargs -n1 git commit --fixup"
+	; hide = update-index --skip-worktree
+	; unhide = update-index --no-skip-worktree
+	; hidden = "! git ls-files -v | grep '^S' | cut -c3-"
+	; show-hidden = "! git show HEAD:\"$1\" | git diff --no-index - \"$1\" #"
 [push]
 	default = simple
 [core]
