@@ -5,7 +5,7 @@
 	helper = cache --timeout=3600
 [merge]
 	tool = idea
-	conflictstyle = diff3
+	conflictstyle = zdiff3
 [mergetool "code"]
 	cmd = code --wait $MERGED
 	; cmd = code --wait --merge $REMOTE $LOCAL $BASE $MERGED
@@ -19,7 +19,7 @@
 	ui = auto
 [alias]
 	ll = log --stat --abbrev-commit
-	lg = log --color --graph --pretty=format:'%C(bold white)%h%Creset %C(auto)%d%Creset %s %C(bold green)(%cr)%Creset %C(bold blue)<%an>%Creset'
+	lg = log --color --graph --all --pretty=format:'%C(bold white)%h%Creset %C(auto)%d%Creset %s %C(bold green)(%cr)%Creset %C(bold blue)<%an>%Creset'
 	search = "! git log -p -G\"$1\" --all #"
 	recent = branch --verbose --sort=-committerdate
 	fixup = "! git log origin/mainline..HEAD --oneline | fzf --tmux | cut -d' ' -f1 | xargs -n1 git commit --fixup"
