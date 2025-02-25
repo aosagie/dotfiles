@@ -35,6 +35,7 @@
 [pull]
 	ff = only
 [diff]
+	algorithm = histogram
 	wsErrorHighlight = all
 [include]
 	path = ~/.gitconfig.local
