@@ -73,6 +73,10 @@ autoload -U colors && colors
 # Set up the prompt
 autoload -Uz promptinit && promptinit
 
+# Load current command line in editor
+autoload -U edit-command-line
+zle -N edit-command-line
+
 # Pasting with tabs doesn't perform completion
 zstyle ':completion:*' insert-tab pending
 
@@ -141,6 +145,7 @@ bindkey "\e[Z" reverse-menu-complete #shift+tab
 # bindkey "^R" history-incremental-search-backward #ctrl+r
 bindkey "^[[A" up-line-or-search #up
 bindkey "^[[B" down-line-or-search #down
+bindkey "^x^e" edit-command-line
 
 # Turn off terminal driver flow control
 # Fixes inability to ctrl-s horizontal splits in terminal vim's CtrlP
