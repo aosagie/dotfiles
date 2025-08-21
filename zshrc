@@ -103,6 +103,8 @@ alias rm='rm -i'
 alias mv='mv -i'
 alias cp='cp -i'
 alias rg='rg --smart-case'
+alias z=' z'
+alias zi=' zi'
 
 # Automatically run 'ls' upon entering a new directory
 function chpwd() {
@@ -151,5 +153,6 @@ KEYTIMEOUT=20 # Give some time to enter two key vi commands - like 'jj'
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
 eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
 
 # zprof #PROFILING
