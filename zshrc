@@ -96,7 +96,7 @@ case "$OSTYPE" in
     alias ls=' gls -F --color=auto --group-directories-first'
     alias zcat='gzcat'
     alias cut='gcut'
-    alias trash='trash -F'
+    alias trash='trash'
     ;;
   *)
     echo "unknown OSTYPE: $OSTYPE"
@@ -159,5 +159,6 @@ KEYTIMEOUT=20 # Give some time to enter two key vi commands - like 'jj'
 
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
+eval "$(mise activate zsh)"
 
 # zprof #PROFILING
