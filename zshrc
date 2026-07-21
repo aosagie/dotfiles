@@ -3,6 +3,7 @@
 export ZPLUG_HOME=~/.zplug
 source $ZPLUG_HOME/init.zsh
 
+zplug "romkatv/powerlevel10k", as:theme, depth:1
 zplug "zsh-users/zsh-syntax-highlighting", defer:2 #https://github.com/zsh-users/zsh-syntax-highlighting#why-must-zsh-syntax-highlightingzsh-be-sourced-at-the-end-of-the-zshrc-file
 # zplug "zdharma-continuum/fast-syntax-highlighting" #This doesn't work that well
 zplug "zsh-users/zsh-completions"
@@ -157,8 +158,11 @@ KEYTIMEOUT=20 # Give some time to enter two key vi commands - like 'jj'
 
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 eval "$(mise activate zsh)"
 
 # zprof #PROFILING
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
